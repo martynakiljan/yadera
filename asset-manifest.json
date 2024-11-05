@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/martynakiljan/yadera/static/css/main.b4d5836d.css",
+    "main.js": "/martynakiljan/yadera/static/js/main.a126f67c.js",
+    "static/js/453.41f68d1d.chunk.js": "/martynakiljan/yadera/static/js/453.41f68d1d.chunk.js",
+    "static/media/logo.png": "/martynakiljan/yadera/static/media/logo.d206b32b82ed6363602f.png",
+    "static/media/slider17.jpeg": "/martynakiljan/yadera/static/media/slider17.ecb84be813ea0de105d2.jpeg",
+    "static/media/logo-white.png": "/martynakiljan/yadera/static/media/logo-white.3ccca28c0dca87473a7c.png",
+    "static/media/header.jpg": "/martynakiljan/yadera/static/media/header.030a2d3dfe1717e94e5e.jpg",
+    "static/media/image3.jpeg": "/martynakiljan/yadera/static/media/image3.4a370b774d2c13b534c8.jpeg",
+    "static/media/slider10.jpeg": "/martynakiljan/yadera/static/media/slider10.c4056aebf1f25875c2e1.jpeg",
+    "static/media/slider9.jpeg": "/martynakiljan/yadera/static/media/slider9.cfbd74878ef94aa881b4.jpeg",
+    "static/media/slider11.jpeg": "/martynakiljan/yadera/static/media/slider11.869795e9e16b2a7f0f70.jpeg",
+    "static/media/image-11.jpg": "/martynakiljan/yadera/static/media/image-11.c109e3b67559f0e8f876.jpg",
+    "static/media/image1.jpeg": "/martynakiljan/yadera/static/media/image1.25516023a8258125b53a.jpeg",
+    "static/media/slider6.jpeg": "/martynakiljan/yadera/static/media/slider6.25516023a8258125b53a.jpeg",
+    "static/media/slider12.jpeg": "/martynakiljan/yadera/static/media/slider12.176e2cc41d97340192a6.jpeg",
+    "static/media/image2.jpeg": "/martynakiljan/yadera/static/media/image2.6ce086f4de8b5f0722c1.jpeg",
+    "static/media/slider13.jpeg": "/martynakiljan/yadera/static/media/slider13.90541cc47c8814a2a4cf.jpeg",
+    "static/media/image-9.jpg": "/martynakiljan/yadera/static/media/image-9.6207c7c02dd6fc0cd814.jpg",
+    "static/media/slider1.jpeg": "/martynakiljan/yadera/static/media/slider1.6aff35f3aa00fe300005.jpeg",
+    "static/media/image-13.jpeg": "/martynakiljan/yadera/static/media/image-13.43a5d5cf0cf48d6c91d2.jpeg",
+    "static/media/slider2.jpeg": "/martynakiljan/yadera/static/media/slider2.3a7534d6868b63e74f68.jpeg",
+    "static/media/slider3.jpeg": "/martynakiljan/yadera/static/media/slider3.4224a21420734c44335d.jpeg",
+    "static/media/slider14.jpeg": "/martynakiljan/yadera/static/media/slider14.44239afeb5be6fe82e95.jpeg",
+    "static/media/slider8.jpeg": "/martynakiljan/yadera/static/media/slider8.33135656b3889873c142.jpeg",
+    "static/media/slider7.jpeg": "/martynakiljan/yadera/static/media/slider7.1997d753279f2d47dc99.jpeg",
+    "static/media/slider4.jpeg": "/martynakiljan/yadera/static/media/slider4.6b54589dfadcc5b65e49.jpeg",
+    "static/media/front-building.webp": "/martynakiljan/yadera/static/media/front-building.4ca2ea0e42455e44c97a.webp",
+    "static/media/slider5.jpeg": "/martynakiljan/yadera/static/media/slider5.0d2abf6dfec3d5d2d6c3.jpeg",
+    "static/media/service-2.png": "/martynakiljan/yadera/static/media/service-2.185cf9699abd5a599066.png",
+    "static/media/service-1.png": "/martynakiljan/yadera/static/media/service-1.640c9ee65112ba98cd97.png",
+    "index.html": "/martynakiljan/yadera/index.html",
+    "main.b4d5836d.css.map": "/martynakiljan/yadera/static/css/main.b4d5836d.css.map",
+    "main.a126f67c.js.map": "/martynakiljan/yadera/static/js/main.a126f67c.js.map",
+    "453.41f68d1d.chunk.js.map": "/martynakiljan/yadera/static/js/453.41f68d1d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4d5836d.css",
+    "static/js/main.a126f67c.js"
+  ]
+}
