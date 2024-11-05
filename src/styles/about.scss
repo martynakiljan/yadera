@@ -1,0 +1,28 @@
+.about__text {
+	display: block;
+	font-size: 16px;
+
+	line-height: 1.35;
+	margin-bottom: 20px;
+
+	@include md-min {
+		font-size: 22px;
+		margin-bottom: 0px;
+	}
+
+	&:nth-of-type(2) {
+		margin-bottom: 0;
+	}
+
+	+ .about__text {
+		margin-top: 20px;
+	}
+}
+
+.about__text-wrapper {
+	margin-bottom: 50px;
+
+	@include md-max {
+		margin-bottom: 0;
+	}
+}

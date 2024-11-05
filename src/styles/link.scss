@@ -1,0 +1,44 @@
+.link {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	margin-top: 40px;
+	text-decoration: none;
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -2px;
+		width: 100%;
+		height: 1px;
+		background-color: black;
+		transform: scaleX(0); /* Set initial scale to 0 for hidden state */
+		transform-origin: left;
+		transition: transform 0.3s ease, background-color 0.3s ease;
+	}
+
+	/* This triggers the animation when hovering over .link */
+	&:hover::after {
+		transform: scaleX(1); /* Expands the line to full width */
+		background-color: $color-main;
+	}
+}
+
+.link-text {
+	position: relative;
+	font-weight: 500;
+	font-size: 15px;
+
+	@include md-min {
+		font-size: 22px;
+	}
+}
+
+.link-icon {
+	padding: 0 10px;
+	display: inline-flex;
+}

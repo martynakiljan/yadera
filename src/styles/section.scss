@@ -1,0 +1,47 @@
+@import './mixins';
+@import './variables';
+
+.section {
+	@include content-width();
+
+	margin: 40px 0;
+
+	@include md-min {
+		display: flex;
+		margin: 0 auto;
+		justify-content: space-between;
+		margin: 100px auto;
+		gap: 50px;
+
+		&.section-services {
+			margin-bottom: 0;
+			margin-top: 100px;
+
+			@include md-min {
+				margin-top: 200px;
+			}
+		}
+	}
+
+	&.section-story {
+		@include md-max {
+			margin-top: 0px;
+		}
+	}
+}
+
+.section-col__left {
+	width: 100%;
+
+	@include md-min {
+		width: 25%;
+	}
+}
+
+.section-col__right {
+	width: 100%;
+
+	@include md-min {
+		width: 75%;
+	}
+}

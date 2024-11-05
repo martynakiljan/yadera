@@ -1,0 +1,18 @@
+.slash {
+	color: $color-red;
+	font-weight: 500;
+}
+
+.title {
+	font-size: 17px;
+	font-weight: 450;
+	text-transform: uppercase;
+
+	@include md-min {
+		font-size: 22px;
+	}
+
+	.section-story & {
+		margin-top: 0;
+	}
+}

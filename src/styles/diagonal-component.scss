@@ -1,0 +1,23 @@
+.diagonal-component {
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: -50px;
+		left: 0;
+		right: 0;
+		height: 100px;
+		background-color: white;
+		transform: skewY(-4deg);
+		z-index: 0;
+	}
+}
+
+.diagonal-component--red {
+	margin-top: 100px;
+	z-index: -1;
+	&::before {
+		background-color: $color-red;
+	}
+}
