@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/yadera/static/css/main.2c70e1df.css",
+    "main.css": "/yadera/static/css/main.f49425ad.css",
     "main.js": "/yadera/static/js/main.a3b02e68.js",
     "static/js/453.41f68d1d.chunk.js": "/yadera/static/js/453.41f68d1d.chunk.js",
     "static/media/logo.png": "/yadera/static/media/logo.d206b32b82ed6363602f.png",
@@ -31,12 +31,12 @@
     "static/media/service-2.png": "/yadera/static/media/service-2.185cf9699abd5a599066.png",
     "static/media/service-1.png": "/yadera/static/media/service-1.640c9ee65112ba98cd97.png",
     "index.html": "/yadera/index.html",
-    "main.2c70e1df.css.map": "/yadera/static/css/main.2c70e1df.css.map",
+    "main.f49425ad.css.map": "/yadera/static/css/main.f49425ad.css.map",
     "main.a3b02e68.js.map": "/yadera/static/js/main.a3b02e68.js.map",
     "453.41f68d1d.chunk.js.map": "/yadera/static/js/453.41f68d1d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c70e1df.css",
+    "static/css/main.f49425ad.css",
     "static/js/main.a3b02e68.js"
   ]
 }
