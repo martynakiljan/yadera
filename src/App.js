@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useEffect, useState } from 'react'
 import './App.css'
 import Menu from './components/Menu'
@@ -17,16 +16,47 @@ import TwoImages from './components/TwoImages'
 import './styles/all.scss'
 import Preloader from './components/Preloader'
 import image13 from './assets/images/images/image-13.jpeg'
+import image15 from './assets/images/images/image-15.jpeg'
+
+const preloadImage = src => {
+	return new Promise(resolve => {
+		const img = new Image()
+		img.src = src
+		img.onload = resolve
+	})
+}
 
 function App() {
 	const { scrollYProgress } = useScroll()
 	const [isVisible, setIsVisible] = useState(false)
-	const [loading, setLoading] = useState(true) 
+	const [loading, setLoading] = useState(true)
+	const [isImageLoaded, setIsImageLoaded] = useState(false)
 
 	const handleScroll = () => {
 		const currentScroll = window.scrollY
-		setIsVisible(currentScroll > 300) 
+		setIsVisible(currentScroll > 300)
 	}
+
+	// Wstępne ładowanie obrazu w tle
+	useEffect(() => {
+		const loadImage = async () => {
+			await preloadImage(image13)
+			setIsImageLoaded(true)
+		}
+
+		loadImage()
+	}, [])
+
+	
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			if (isImageLoaded) {
+				setLoading(false)
+			}
+		}, 2000)
+
+		return () => clearTimeout(timer)
+	}, [isImageLoaded])
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll)
@@ -47,7 +77,7 @@ function App() {
 						<Menu />
 						<Story />
 						<About />
-						<BigImage img={image13} />
+						<BigImage img={image15} />
 						<Info />
 						<Services />
 						<Slider />

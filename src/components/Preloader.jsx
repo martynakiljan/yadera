@@ -14,7 +14,6 @@ function Preloader({ setLoading }) {
 	return (
 		<motion.div
 			className='preloader'
-	
 			transition={{ duration: 0.5, delay: 1 }}
 		>
 			<motion.div

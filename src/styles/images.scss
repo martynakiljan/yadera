@@ -25,7 +25,6 @@
 
 .images-mobile-inner {
 	display: flex;
-	gap: 10px;
 
 	.image {
 		flex: 1 0 100%;
@@ -74,7 +73,7 @@
 	background-image: url(../assets/images/images/image3.jpeg);
 	width: 100%;
 	height: 300px;
-	margin-left: -10px;
+
 
 	@include md-min {
 		width: 25%;
