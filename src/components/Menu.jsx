@@ -58,6 +58,11 @@ function Menu() {
 							</a>
 						</li>
 						<li className='menu__li'>
+							<a className='menu__link' href='#reviews' onClick={closeMenu}>
+								referenzen
+							</a>
+						</li>
+						<li className='menu__li'>
 							<a className='menu__link menu__link--contact' href='#contact' onClick={closeMenu}>
 								kontakt
 							</a>

@@ -32,6 +32,11 @@ const Footer = () => {
 							</a>
 						</li>
 						<li className='menu__li'>
+							<a className='menu__link menu__link--footer' href='#reviews'>
+							referenzen
+							</a>
+						</li>
+						<li className='menu__li'>
 							<a className='menu__link menu__link--footer' href='#contact'>
 								kontakt
 							</a>
