@@ -49,31 +49,3 @@
     }
 }
 
-/* Add zoom on hover for .service__item */
-.service__item {
-    position: relative;
-    overflow: hidden; /* Ensures the zoom effect stays within bounds */
-    transition: transform 0.3s ease; /* Smooth zoom transition */
-}
-
-.service__item:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
-}
-
-/* Add an overlay effect using ::after */
-.service__item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.4;
-    transition: opacity 0.3s ease; /* Smooth overlay transition */
-    pointer-events: none; /* Prevent the overlay from interfering with hover */
-}
-
-.service__item:hover::before {
-    opacity: 0.6; /* Darkens the overlay on hover */
-}

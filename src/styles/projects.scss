@@ -1,0 +1,189 @@
+.projects {
+	@include content-width();
+	margin: 0 auto;
+}
+
+.project-wrapper {
+	position: relative;
+	overflow: hidden; // Ogranicza efekt animacji wewnątrz kontenera
+	transition: transform 0.3s ease;
+	width: 50%;
+}
+.project-img {
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	aspect-ratio: 3/4;
+	max-height: 400px;
+	width: 100%;
+}
+
+.project-img:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.4;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+}
+
+.project-img:hover {
+	transform: scale(1.1); // Efekt skalowania jest teraz ograniczony do kontenera
+}
+
+.project-img:hover::before {
+	opacity: 0;
+}
+
+.project-info {
+	width: 50%;
+}
+
+.project__item {
+	position: relative;
+}
+
+.project {
+	cursor: pointer;
+	background-color: #c40914;
+	z-index: 22;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: 40px 0;
+	overflow: hidden;
+	transition: transform 0.3s ease;
+
+	@include md-min {
+		flex-direction: row;
+		align-items: center;
+
+		justify-content: space-between;
+
+		.revert & {
+			flex-direction: row-reverse;
+		}
+	}
+}
+
+.project-title {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 30px;
+	color: white;
+}
+
+.project__btn-more {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	right: 0;
+	width: 50%;
+	display: flex;
+	bottom: 0;
+	left: auto;
+	text-align: center;
+	padding: 10px 0;
+	color: $color-white;
+
+	.revert & {
+		right: auto;
+		left: 0;
+	}
+}
+
+.project__btn-more-text {
+	padding: 0 8px;
+	font-size: 12px;
+}
+
+.project-info {
+	position: relative;
+}
+
+.project-info__active {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	right: 0;
+	background-color: white;
+	width: 50%;
+}
+
+.project-info__active {
+	position: absolute;
+	top: 0;
+	left: 0; // Zmiana, aby zająć całą przestrzeń
+	background-color: $color-white;
+	width: 100%; // Zajmuje całą szerokość project-info
+	height: 100%; // Zajmuje całą wysokość project-info
+	display: none; // Początkowo ukryte
+	opacity: 0; // Ukryte przez opacity
+	transition: opacity 0.3s ease; // Płynne przejście
+	z-index: 10; // Ustawiamy wyższy z-index, aby info było na wierzchu
+
+	border-right: 2px solid $color-red;
+
+	.revert & {
+		border-left: 2px solid $color-red;
+		border-right: 0;
+	}
+}
+
+.project__item {
+	&:hover {
+		.project-info__active {
+			display: block; // Po hover wyświetlamy "info"
+			width: 50%;
+			right: 0;
+			left: 50%;
+			opacity: 1; // Płynne przejście do pełnej widoczności
+			padding: 20px;
+			height: 100%;
+		}
+	}
+
+	&.revert {
+		&:hover {
+			.project-info__active {
+				right: 50%;
+				left: 0;
+			}
+		}
+	}
+}
+.project-info {
+	width: 50%; // Możesz dostosować w razie potrzeby
+	position: relative;
+}
+
+.project-info__active--text {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	height: 100%;
+	align-items: flex-start;
+}
+
+.project-info__active-title {
+	margin-bottom: 20px;
+	font-weight: 500;
+	text-decoration: underline;
+	text-decoration-color: $color-red;
+	text-underline-offset: 2px;
+}
+
+.project-info-text {
+	padding-bottom: 10px;
+	font-weight: 400;
+}
+
+.project-info-text__title {
+	font-weight: 500;
+}
