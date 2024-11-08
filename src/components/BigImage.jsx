@@ -14,11 +14,12 @@ const BigImage = ({ img }) => {
 
 	return (
 		<div className='big-image-container' ref={ref}>
-			<motion.img
+			<motion.div
 				className='big-image'
-				src={img}
-				alt='building'
 				style={{
+					backgroundImage: `url(${img})`,
+					backgroundSize: 'cover',
+					backgroundPosition: 'center',
 					scale,
 					y: translateY,
 				}}

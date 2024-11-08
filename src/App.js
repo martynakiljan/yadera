@@ -7,50 +7,18 @@ import Footer from './components/Footer'
 import { motion, useScroll } from 'framer-motion'
 import Contact from './components/Contact'
 import './styles/all.scss'
-import Preloader from './components/Preloader'
-import image13 from './assets/images/images/image-13.jpeg'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Projects from './components/Projects'
 import Home from './components/Home'
 
-const preloadImage = src => {
-	return new Promise(resolve => {
-		const img = new Image()
-		img.src = src
-		img.onload = resolve
-	})
-}
-
 function App() {
 	const { scrollYProgress } = useScroll()
 	const [isVisible, setIsVisible] = useState(false)
-	const [loading, setLoading] = useState(true)
-	const [isImageLoaded, setIsImageLoaded] = useState(false)
 
 	const handleScroll = () => {
 		const currentScroll = window.scrollY
 		setIsVisible(currentScroll > 300)
 	}
-
-	// Wstępne ładowanie obrazu w tle
-	useEffect(() => {
-		const loadImage = async () => {
-			await preloadImage(image13)
-			setIsImageLoaded(true)
-		}
-
-		loadImage()
-	}, [])
-
-	useEffect(() => {
-		const timer = setTimeout(() => {
-			if (isImageLoaded) {
-				setLoading(false)
-			}
-		}, 0)
-
-		return () => clearTimeout(timer)
-	}, [isImageLoaded])
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll)
@@ -61,29 +29,20 @@ function App() {
 
 	return (
 		<Router>
-			{loading ? (
-				<Preloader setLoading={setLoading} />
-			) : (
-				<>
-					<motion.div className='progress-bar' style={{ scaleX: scrollYProgress }} />
-					<div className='app'>
-					
-						<div className='sections'>
-						<Menu />
-							<Routes>
-								<Route exact path='/'>
-									<Route path='/' element={<Home />} />
-									<Route path='/about' element={<About />} />
-									<Route path='/dienstleistunfen' element={<Services />} />
-									<Route path='/projekte' element={<Projects />} />
-									<Route path='/contact' element={<Contact />} />
-								</Route>
-							</Routes>
-						</div>
-						<Footer />
-					</div>
-				</>
-			)}
+			<motion.div className='progress-bar' style={{ scaleX: scrollYProgress }} />
+			<div className='app'>
+				<div className='sections'>
+					<Menu />
+					<Routes>
+						<Route path='/' element={<Home />} />
+						<Route path='/about' element={<About />} />
+						<Route path='/dienstleistunfen' element={<Services />} />
+						<Route path='/projekte' element={<Projects />} />
+						<Route path='/contact' element={<Contact />} />
+					</Routes>
+				</div>
+				<Footer />
+			</div>
 		</Router>
 	)
 }

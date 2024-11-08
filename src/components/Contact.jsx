@@ -2,8 +2,9 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Title from './Title'
 import ClipLoader from 'react-spinners/ClipLoader'
-import Header from './Header'
 
+import BigImage from './BigImage'
+import img from '../assets/images/images/image-12.jpeg'
 const Contact = () => {
 	const {
 		register,
@@ -30,7 +31,7 @@ const Contact = () => {
 
 	return (
 		<>
-			<Header />
+			<BigImage img={img} />
 			<div className='section' id='contact'>
 				<div className='section-col section-col__left'>
 					<Title text='sollen wir reden?' />

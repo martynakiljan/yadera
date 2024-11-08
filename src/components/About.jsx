@@ -1,14 +1,18 @@
 import Title from './Title'
 import Link from './Link'
-import Header from './Header'
+import img from '../assets/images/images/image-about.jpeg'
+import BigImage from './BigImage'
+import Story from './Story'
 import { useLocation } from 'react-router-dom'
 
 const About = () => {
 	const location = useLocation()
 	return (
-		<>
-		{location.pathname === '/services' && <Header />}
-			<div className='about' id='about'>
+		<div id='about'>
+			{location.pathname === '/about' && <BigImage img={img} />}
+			{location.pathname === '/about' && <Story />}
+
+			<div className='about'>
 				<div className='about'>
 					<div className='section'>
 						<div className='section-col section-col__left'>
@@ -35,7 +39,7 @@ const About = () => {
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	)
 }
 

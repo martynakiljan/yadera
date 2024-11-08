@@ -1,7 +1,7 @@
 import Header from './Header'
 const Projects = () => {
 	return (
-		<div>
+		<div id='projects'>
 			<Header />
 			<h1>projects</h1>
 		</div>
