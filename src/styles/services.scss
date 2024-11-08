@@ -1,24 +1,29 @@
-.service__item {
+.service__item--wrapper {
 	cursor: pointer;
+	width: calc(50% - 20px);
+	overflow: hidden;
+}
+
+.service__item {
 	background-repeat: no-repeat;
 	background-size: cover;
 	aspect-ratio: 1/1;
-	width: 50%;
 }
 
-.service__item-1  {
-	background-image: url(../assets/images/services/service-2.jpg);
-}
-
-.service__item-2  {
+.service__item-2 {
 	background-image: url(../assets/images/services/service-1.png);
 }
 
 .service__item-3 {
 	background-image: url(../assets/images/services/service-3.png);
 }
-.service__item-4  {
+
+.service__item-4 {
 	background-image: url(../assets/images/services/service-4.jpg);
+}
+
+.service__item-1 {
+	background-image: url(../assets/images/services/service-2.jpg);
 }
 
 .service__item {
@@ -35,4 +40,20 @@
 .services {
 	@include content-width;
 	margin: 0 auto;
+}
+
+.service__inner {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.service__title {
+	font-size: 40px;
+	text-transform: uppercase;
+	z-index: 11;
+	color: $color-white;
+	font-weight: 400;
 }

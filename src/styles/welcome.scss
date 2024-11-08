@@ -1,4 +1,4 @@
-.info {
+.welcome {
 	text-align: center;
 	font-size: 22px;
 	@include content-width();
@@ -9,4 +9,16 @@
 		font-size: 16px;
 		margin: 40px 0;
 	}
+}
+
+.welcome-text {
+	margin-top: 50px;
+}
+
+.welcome-title {
+	font-weight: 400;
+}
+
+.welcome-subtitle {
+	font-size: 25px;
 }

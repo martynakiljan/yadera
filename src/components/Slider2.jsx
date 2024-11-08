@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import logo1 from '../assets/images/partners-logo/logo1.png'
+
 import logo2 from '../assets/images/partners-logo/logo2.png'
 import logo3 from '../assets/images/partners-logo/logo3.png'
 import logo4 from '../assets/images/partners-logo/logo4.png'
@@ -13,7 +13,7 @@ import logo11 from '../assets/images/partners-logo/logo11.png'
 import logo12 from '../assets/images/partners-logo/logo12.png'
 import logo13 from '../assets/images/partners-logo/logo13.png'
 
-const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10, logo11, logo12, logo13]
+const logos = [logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10, logo11, logo12, logo13]
 
 const Slider2 = () => {
 	const sliderRef = useRef(null)
@@ -44,7 +44,7 @@ const Slider2 = () => {
 						<div
 							className='slider__item slider__item--logo'
 							key={index}
-							style={{ backgroundImage: `url(${image})`}}
+							style={{ backgroundImage: `url(${image})` }}
 							aria-label={`slider ${index + 1}`}
 						/>
 					</div>

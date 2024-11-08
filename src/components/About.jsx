@@ -1,10 +1,13 @@
 import Title from './Title'
 import Link from './Link'
 import Header from './Header'
+import { useLocation } from 'react-router-dom'
+
 const About = () => {
+	const location = useLocation()
 	return (
 		<>
-			<Header />
+		{location.pathname === '/services' && <Header />}
 			<div className='about' id='about'>
 				<div className='about'>
 					<div className='section'>

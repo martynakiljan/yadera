@@ -2,15 +2,16 @@ import Header from './Header'
 import Slider from './Slider'
 import Services from './Services'
 import Reviews from './Reviews'
-import Info from './Info'
+import Welcome from './Welcome'
 import Slider2 from './Slider2'
-
+import About from './About'
 const Home = () => {
 	return (
 		<>
 			<Header />
-			<Info />
+			<Welcome />
 			<Services />
+			<About />
 			<Slider />
 			<Reviews />
 			<Slider2 />

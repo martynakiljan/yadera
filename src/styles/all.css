@@ -198,7 +198,12 @@ input {
   margin-left: 15px;
 }
 .list-item + .list-item {
-  margin-top: 5px;
+  margin-top: 12px;
+}
+@media (max-width: 767px) {
+  .list-item {
+    margin-left: 17px;
+  }
 }
 
 .list-subtitle {
@@ -381,6 +386,35 @@ a {
   }
 }
 
+/* Add zoom on hover for .service__item */
+.service__item {
+  position: relative;
+  overflow: hidden; /* Ensures the zoom effect stays within bounds */
+  transition: transform 0.3s ease; /* Smooth zoom transition */
+}
+
+.service__item:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Add an overlay effect using ::after */
+.service__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+  transition: opacity 0.3s ease; /* Smooth overlay transition */
+  pointer-events: none; /* Prevent the overlay from interfering with hover */
+}
+
+.service__item:hover::before {
+  opacity: 0.6; /* Darkens the overlay on hover */
+}
+
 .menu__logo {
   display: block;
   margin: 0 auto;
@@ -529,59 +563,74 @@ a {
   }
 }
 
-.service-image {
-  width: 30px;
-  height: 30px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-@media screen and (min-width: 992px) {
-  .service-image {
-    width: 40px;
-    height: 40px;
-  }
+.menu__link--contact:hover {
+  text-decoration: none;
 }
 
-.service-image-1 {
+.service__item--wrapper {
+  cursor: pointer;
+  width: calc(50% - 20px);
+  overflow: hidden;
+}
+
+.service__item {
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 1/1;
+}
+
+.service__item-2 {
   background-image: url(../assets/images/services/service-1.png);
 }
 
-.service-image-2 {
-  background-image: url(../assets/images/services/service-2.png);
-}
-
-.service-image-3 {
+.service__item-3 {
   background-image: url(../assets/images/services/service-3.png);
 }
 
-.services__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 800px;
+.service__item-4 {
+  background-image: url(../assets/images/services/service-4.jpg);
+}
+
+.service__item-1 {
+  background-image: url(../assets/images/services/service-2.jpg);
+}
+
+.service__item {
+  position: relative;
+}
+
+.service__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.services {
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 50px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .services {
+    padding: 0 40px;
+  }
 }
 
-.service {
+.service__inner {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.service-image {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-}
-
-.service-text {
-  text-align: center;
-  letter-spacing: 1px;
-  font-size: 20px;
-  font-weight: 500;
+.service__title {
+  font-size: 40px;
+  text-transform: uppercase;
+  z-index: 11;
+  color: #ffffff;
+  font-weight: 400;
 }
 
 :root {
@@ -740,7 +789,7 @@ a {
 
 .title {
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 450;
   text-transform: uppercase;
 }
 @media screen and (min-width: 992px) {
@@ -780,7 +829,6 @@ a {
 
 .images-mobile-inner {
   display: flex;
-  gap: 10px;
 }
 .images-mobile-inner .image {
   flex: 1 0 100%;
@@ -832,7 +880,6 @@ a {
   background-image: url(../assets/images/images/image3.jpeg);
   width: 100%;
   height: 300px;
-  margin-left: -10px;
 }
 @media screen and (min-width: 992px) {
   .image_3 {
@@ -871,8 +918,7 @@ a {
 
 .about__text {
   display: block;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
   line-height: 1.35;
   margin-bottom: 20px;
 }
@@ -956,6 +1002,15 @@ a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.slider__inner--logos {
+  gap: 50px;
+}
+
+.slider__item--logo {
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .footer {
@@ -1084,7 +1139,7 @@ a {
 }
 @media (max-width: 991px) {
   .accordion-title {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
@@ -1092,16 +1147,17 @@ a {
   padding: 15px 0;
   background-color: #fff;
   animation: fadeIn 0.3s ease-in-out;
+  font-size: 13px;
 }
 .accordion-body li + li,
 .accordion-body p,
 .accordion-body p + li {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 @media screen and (min-width: 992px) {
   .accordion-body {
     font-size: 18px;
-    padding: 20px 15px;
+    padding: 30px 15px;
   }
 }
 
@@ -1137,9 +1193,9 @@ a {
     opacity: 1;
   }
 }
-.list-title {
-  margin-bottom: 10px;
-  font-weight: bold;
+p.list-title {
+  margin-bottom: 20px;
+  font-weight: 450;
 }
 
 .accordion-item {
@@ -1227,12 +1283,17 @@ a {
   font-size: 30px;
   color: #c40914;
 }
+@media (max-width: 767px) {
+  .review svg {
+    font-size: 20px;
+  }
+}
 .review:nth-of-type(1) {
   padding-top: 0;
 }
 
 .review__text {
-  font-size: 15px;
+  font-size: 16px;
   padding: 8px 0;
 }
 @media screen and (min-width: 992px) {
@@ -1346,7 +1407,7 @@ a {
 
 .form-group label {
   display: block;
-  font-size: 15px;
+  font-size: 16px;
   margin-bottom: 5px;
 }
 @media screen and (min-width: 992px) {
@@ -1432,7 +1493,7 @@ button:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   text-align: center;
 }
 @media screen and (min-width: 992px) {
@@ -1472,7 +1533,7 @@ button:hover {
   }
 }
 
-.info {
+.welcome {
   text-align: center;
   font-size: 22px;
   max-width: var(--max-width);
@@ -1482,13 +1543,13 @@ button:hover {
   margin-top: 200px;
 }
 @media screen and (min-width: 768px) {
-  .info {
+  .welcome {
     padding: 0 40px;
   }
 }
 @media (max-width: 991px) {
-  .info {
-    font-size: 18px;
+  .welcome {
+    font-size: 16px;
     margin: 40px 0;
   }
 }
@@ -1497,8 +1558,11 @@ button:hover {
   cursor: pointer;
   display: inline-block;
   position: relative;
-  margin-top: 20px;
+  margin-top: 40px;
   text-decoration: none;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
   /* This triggers the animation when hovering over .link */
 }
 .link::after {
@@ -1515,7 +1579,7 @@ button:hover {
 }
 .link:hover::after {
   transform: scaleX(1); /* Expands the line to full width */
-  background-color: #c40914;
+  background-color: #000000;
 }
 
 .link-text {
@@ -1531,6 +1595,7 @@ button:hover {
 
 .link-icon {
   padding: 0 10px;
+  display: inline-flex;
 }
 
 .progress-bar {
@@ -1632,24 +1697,35 @@ button:hover {
 }
 
 .story__text {
-  margin-bottom: 40px;
+  margin-bottom: 45px;
   display: block;
+}
+@media screen and (min-width: 992px) {
+  .story__text {
+    font-size: 22px;
+  }
 }
 
 .preloader {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: red;
+  right: 0;
+  bottom: 0;
+  background-color: #c40914;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  overflow: hidden;
+}
+
+.preloader-background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #fff;
 }
 
 .logo {
-  width: 150px;
+  max-width: 200px;
 }/*# sourceMappingURL=all.css.map */
