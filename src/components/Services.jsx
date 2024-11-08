@@ -2,7 +2,7 @@ import Title from './Title'
 const Services = () => {
 	return (
 		<div>
-			<div className='services' id='services'>
+			<div className='services'>
 				<div className='section-col section-col__left'>
 					<Title text='Womit beschäftigen wir uns?' />
 				</div>

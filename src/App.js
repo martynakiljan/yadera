@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './App.css'
 import Menu from './components/Menu'
 import About from './components/About'
-import Services from './components/Services'
+import ServicesDetails from './components/ServicesDetails'
 import Footer from './components/Footer'
 import { motion, useScroll } from 'framer-motion'
 import Contact from './components/Contact'
@@ -35,8 +35,8 @@ function App() {
 					<Menu />
 					<Routes>
 						<Route path='/' element={<Home />} />
-						<Route path='/about' element={<About />} />
-						<Route path='/dienstleistunfen' element={<Services />} />
+						<Route path='/uber-uns' element={<About />} />
+						<Route path='/dienstleistungen' element={<ServicesDetails />} />
 						<Route path='/projekte' element={<Projects />} />
 						<Route path='/contact' element={<Contact />} />
 					</Routes>

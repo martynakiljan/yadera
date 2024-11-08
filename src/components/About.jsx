@@ -8,9 +8,9 @@ import { useLocation } from 'react-router-dom'
 const About = () => {
 	const location = useLocation()
 	return (
-		<div id='about'>
-			{location.pathname === '/about' && <BigImage img={img} />}
-			{location.pathname === '/about' && <Story />}
+		<div id='uber-uns'>
+			{location.pathname === '/uber-uns' && <BigImage img={img} />}
+			{location.pathname === '/uber-uns' && <Story />}
 
 			<div className='about'>
 				<div className='about'>

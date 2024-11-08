@@ -57,3 +57,19 @@
 	color: $color-white;
 	font-weight: 400;
 }
+
+.services-details {
+	@include content-width();
+	margin: 0 auto;
+}
+
+.service-detail__title {
+	background-color: $color-red;
+	color: $color-white;
+	font-weight: 450;
+	padding: 20px;
+}
+
+.service-detail__list {
+	padding: 50px 0;
+}

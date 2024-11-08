@@ -2,9 +2,9 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Title from './Title'
 import ClipLoader from 'react-spinners/ClipLoader'
-
 import BigImage from './BigImage'
 import img from '../assets/images/images/image-12.jpeg'
+
 const Contact = () => {
 	const {
 		register,

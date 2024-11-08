@@ -44,12 +44,12 @@ function Menu() {
 							</NavLink>
 						</li>
 						<li className='menu__li'>
-							<NavLink className='menu__link' to='/about' onClick={closeMenu}>
+							<NavLink className='menu__link' to='/uber-uns' onClick={closeMenu}>
 								über uns
 							</NavLink>
 						</li>
 						<li className='menu__li'>
-							<NavLink className='menu__link' to='/dienstleistunfen' onClick={closeMenu}>
+							<NavLink className='menu__link' to='/dienstleistungen' onClick={closeMenu}>
 								dienstleistungen
 							</NavLink>
 						</li>
@@ -58,7 +58,7 @@ function Menu() {
 								projekte
 							</NavLink>
 						</li>
-			
+
 						<li className='menu__li'>
 							<NavLink className='menu__link menu__link--contact' to='/contact' onClick={closeMenu}>
 								kontakt
