@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Title from './Title'
 import ClipLoader from 'react-spinners/ClipLoader'
+import Header from './Header'
 
 const Contact = () => {
 	const {
@@ -29,6 +30,7 @@ const Contact = () => {
 
 	return (
 		<>
+			<Header />
 			<div className='section' id='contact'>
 				<div className='section-col section-col__left'>
 					<Title text='sollen wir reden?' />

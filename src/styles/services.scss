@@ -1,54 +1,38 @@
-.service-image {
-	width: 30px;
-	height: 30px;
+.service__item {
+	cursor: pointer;
 	background-repeat: no-repeat;
-	background-size: contain;
-
-	@include md-min {
-		width: 40px;
-		height: 40px;
-	}
+	background-size: cover;
+	aspect-ratio: 1/1;
+	width: 50%;
 }
 
-.service-image-1 {
+.service__item-1  {
+	background-image: url(../assets/images/services/service-2.jpg);
+}
+
+.service__item-2  {
 	background-image: url(../assets/images/services/service-1.png);
 }
 
-.service-image-2 {
-	background-image: url(../assets/images/services/service-2.png);
-}
-
-.service-image-3 {
+.service__item-3 {
 	background-image: url(../assets/images/services/service-3.png);
 }
+.service__item-4  {
+	background-image: url(../assets/images/services/service-4.jpg);
+}
 
-.services__inner {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	max-width: 800px;
+.service__item {
+	position: relative;
+}
+
+.service__title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.services {
+	@include content-width;
 	margin: 0 auto;
-	padding: 50px;
-}
-
-.service {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.service-image {
-	display: flex;
-
-	justify-content: space-between;
-	flex-direction: column;
-	align-items: center;
-}
-
-.service-text {
-	text-align: center;
-	letter-spacing: 1px;
-	font-size: 20px;
-	font-weight: 500;
 }

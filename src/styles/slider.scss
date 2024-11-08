@@ -31,3 +31,11 @@
 	height: 100%;
 	object-fit: cover;
 }
+
+.slider__inner--logos {
+	gap: 50px;
+}
+.slider__item--logo {
+	background-repeat: no-repeat;
+	background-size: contain;
+}

@@ -17,6 +17,10 @@ import './styles/all.scss'
 import Preloader from './components/Preloader'
 import image13 from './assets/images/images/image-13.jpeg'
 import image15 from './assets/images/images/image-15.jpeg'
+import Slider2 from './components/Slider2'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Projects from './components/Projects'
+import Home from './components/Home'
 
 const preloadImage = src => {
 	return new Promise(resolve => {
@@ -47,7 +51,6 @@ function App() {
 		loadImage()
 	}, [])
 
-	
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			if (isImageLoaded) {
@@ -66,29 +69,31 @@ function App() {
 	}, [])
 
 	return (
-		<>
+		<Router>
 			{loading ? (
 				<Preloader setLoading={setLoading} />
 			) : (
 				<>
 					<motion.div className='progress-bar' style={{ scaleX: scrollYProgress }} />
 					<div className='app'>
-						<Header />
+					
+						<div className='sections'>
 						<Menu />
-						<Story />
-						<About />
-						<BigImage img={image15} />
-						<Info />
-						<Services />
-						<Slider />
-						<Reviews />
-						<TwoImages />
-						<Contact />
+							<Routes>
+								<Route exact path='/'>
+									<Route path='/' element={<Home />} />
+									<Route path='/about' element={<About />} />
+									<Route path='/dienstleistunfen' element={<Services />} />
+									<Route path='/projekte' element={<Projects />} />
+									<Route path='/contact' element={<Contact />} />
+								</Route>
+							</Routes>
+						</div>
 						<Footer />
 					</div>
 				</>
 			)}
-		</>
+		</Router>
 	)
 }
 
