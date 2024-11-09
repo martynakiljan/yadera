@@ -7,14 +7,14 @@ import Footer from './components/Footer'
 import { motion, useScroll } from 'framer-motion'
 import Contact from './components/Contact'
 import './styles/all.scss'
-import { BrowserRouter as Router, Route, Routes, useLocation, Navigate } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, useLocation, Navigate, useNavigate } from 'react-router-dom'
 import Projects from './components/Projects'
 import Home from './components/Home'
 import Preloader from './components/Preloader'
 
 function ScrollToPosition() {
 	const location = useLocation()
-	const navigate = useNavigate();
+	const navigate = useNavigate()
 
 	useEffect(() => {
 		const isHomePage = location.pathname === '/'
@@ -64,12 +64,12 @@ function App() {
 				<div className='sections'>
 					<Menu />
 					<Routes>
-							<Route path='/' element={<Home />} />
-							<Route path='/uber-uns' element={<About />} />
-							<Route path='/dienstleistungen' element={<ServicesDetails />} />
-							<Route path='/projekte' element={<Projects />} />
-							<Route path='/contact' element={<Contact />} />
-							<Route path="/*" element={<Navigate to="/" />} />
+						<Route path='/' element={<Home />} />
+						<Route path='/uber-uns' element={<About />} />
+						<Route path='/dienstleistungen' element={<ServicesDetails />} />
+						<Route path='/projekte' element={<Projects />} />
+						<Route path='/contact' element={<Contact />} />
+						<Route path='/*' element={<Navigate to='/' />} />
 					</Routes>
 				</div>
 				<Footer />
