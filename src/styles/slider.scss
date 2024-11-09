@@ -5,7 +5,13 @@
 	margin: 100px 0;
 
 	@include md-min {
-		margin: 200px 0;
+		margin: 140px 0;
+	}
+}
+
+.slider-partners {
+	@include md-min {
+		margin: 100px 0;
 	}
 }
 
@@ -38,4 +44,7 @@
 .slider__item--logo {
 	background-repeat: no-repeat;
 	background-size: contain;
+	background-position: center;
+	max-height: 100px;
+	max-width: 150px;
 }

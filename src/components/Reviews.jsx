@@ -26,7 +26,6 @@ const Reviews = () => {
 		})
 
 		return () => {
-			// eslint-disable-next-line react-hooks/exhaustive-deps
 			reviewsRef.current.forEach(review => {
 				if (review) observer.unobserve(review)
 			})

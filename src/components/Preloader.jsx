@@ -6,7 +6,7 @@ function Preloader({ setLoading }) {
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			setLoading(false);
-		}, 1000); 
+		}, 1500); 
 
 		return () => clearTimeout(timer);
 	}, [setLoading]);
@@ -27,7 +27,7 @@ function Preloader({ setLoading }) {
 				alt='Logo'
 				className='logo'
 				initial={{ opacity: 0 }} 
-				animate={{ opacity: [0, 1, 0.5, 1], transition: { duration: 1.5, repeat: Infinity } }} 
+				animate={{ opacity: [0, 1, 0.8, 1], transition: { duration: 1.5, repeat: Infinity } }} 
 			/>
 		</motion.div>
 	);

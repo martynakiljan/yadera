@@ -7,13 +7,30 @@ import Footer from './components/Footer'
 import { motion, useScroll } from 'framer-motion'
 import Contact from './components/Contact'
 import './styles/all.scss'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom'
 import Projects from './components/Projects'
 import Home from './components/Home'
+import Preloader from './components/Preloader'
+
+function ScrollToPosition() {
+	const location = useLocation()
+
+	useEffect(() => {
+		const isHomePage = location.pathname === '/'
+
+		window.scrollTo({
+			top: isHomePage ? 0 : window.innerHeight * 0.7,
+			behavior: 'smooth', 
+		})
+	}, [location])
+
+	return null
+}
 
 function App() {
 	const { scrollYProgress } = useScroll()
 	const [isVisible, setIsVisible] = useState(false)
+	const [loading, setLoading] = useState(true)
 
 	const handleScroll = () => {
 		const currentScroll = window.scrollY
@@ -22,6 +39,11 @@ function App() {
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll)
+
+		setTimeout(() => {
+			setLoading(false)
+		}, 3000)
+
 		return () => {
 			window.removeEventListener('scroll', handleScroll)
 		}
@@ -29,18 +51,23 @@ function App() {
 
 	return (
 		<Router>
-			<motion.div className='progress-bar' style={{ scaleX: scrollYProgress }} />
+			<ScrollToPosition />
+
+			{loading ? (
+				<Preloader setLoading={setLoading} />
+			) : (
+				<motion.div className='progress-bar' style={{ scaleX: scrollYProgress }} />
+			)}
+
 			<div className='app'>
 				<div className='sections'>
 					<Menu />
 					<Routes>
-					<Route exact path='/'>
 						<Route path='/' element={<Home />} />
 						<Route path='/uber-uns' element={<About />} />
 						<Route path='/dienstleistungen' element={<ServicesDetails />} />
 						<Route path='/projekte' element={<Projects />} />
 						<Route path='/contact' element={<Contact />} />
-						</Route>
 					</Routes>
 				</div>
 				<Footer />

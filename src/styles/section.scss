@@ -1,6 +1,6 @@
-@import './mixins';
-@import './variables';
-
+.sections {
+	overflow: hidden;
+}
 .section {
 	@include content-width();
 
@@ -10,17 +10,8 @@
 		display: flex;
 		margin: 0 auto;
 		justify-content: space-between;
-		margin: 100px auto;
+		margin: 70px auto;
 		gap: 50px;
-
-		&.section-services {
-			margin-bottom: 0;
-			margin-top: 100px;
-
-			@include md-min {
-				margin-top: 200px;
-			}
-		}
 	}
 
 	&.section-story {
@@ -38,9 +29,10 @@
 
 		.services &,
 		.services-details &,
-		.projects & {
+		.projects &,
+		.partners & {
 			width: 100%;
-			margin: 50px 0;
+			margin: 70px 0;
 		}
 	}
 }

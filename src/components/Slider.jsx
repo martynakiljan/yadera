@@ -55,7 +55,7 @@ const Slider = () => {
 	}, [])
 
 	return (
-		<div className='slider' id='projects'>
+		<div className='slider' >
 			<div className='slider__inner' ref={sliderRef}>
 				{images.concat(images).map((image, index) => (
 					<div className='slider__item' key={index}>

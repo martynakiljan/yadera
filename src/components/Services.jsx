@@ -7,13 +7,11 @@ const Services = () => {
 	const [fadeOut, setFadeOut] = useState(false)
 
 	const handleServiceClick = serviceId => {
-		// Start fade-out effect
 		setFadeOut(true)
 
-		// Delay navigation to allow fade-out animation to complete
 		setTimeout(() => {
 			navigate('/dienstleistungen', { state: { serviceId } })
-		}, 100) // Match this with the CSS transition duration
+		}, 500) 
 	}
 
 	return (
@@ -39,7 +37,7 @@ const Services = () => {
 				</div>
 				<div className='service__item--wrapper' onClick={() => handleServiceClick('service4')}>
 					<div className='service__item service__item-4'>
-						<h2 className='service__title'>Plarrenlegger</h2>
+						<h2 className='service__title'>Plattenlegger</h2>
 					</div>
 				</div>
 			</div>

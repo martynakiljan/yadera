@@ -3,22 +3,27 @@
 	font-size: 22px;
 	@include content-width();
 	text-align: left;
-	margin-top: 200px;
 
 	@include md-max {
 		font-size: 16px;
-		margin: 40px 0;
 	}
 }
 
 .welcome-text {
-	margin-top: 50px;
+	@include md-min {
+		margin-top: 70px;
+	}
 }
 
 .welcome-title {
 	font-weight: 400;
+	margin-bottom: 10px;
 }
 
 .welcome-subtitle {
-	font-size: 25px;
+	font-size: 18px;
+
+	@include md-min {
+		font-size: 25px;
+	}
 }

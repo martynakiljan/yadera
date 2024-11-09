@@ -18,11 +18,3 @@
 		margin-top: 20px;
 	}
 }
-
-.about__text-wrapper {
-	margin-bottom: 50px;
-
-	@include md-max {
-		margin-bottom: 0;
-	}
-}

@@ -24,10 +24,14 @@ const Images = () => {
 			{ threshold: 0.2 }
 		)
 
-		imageRefs.current.forEach(image => observer.observe(image))
-		const imgRefs = imageRefs.current
+		imageRefs.current.forEach(image => {
+			if (image) observer.observe(image)
+		})
+
 		return () => {
-			imgRefs.forEach(image => observer.unobserve(image))
+			imageRefs.current.forEach(image => {
+				if (image) observer.unobserve(image)
+			})
 			observer.disconnect()
 		}
 	}, [])

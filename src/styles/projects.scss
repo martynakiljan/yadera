@@ -1,13 +1,26 @@
 .projects {
 	@include content-width();
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 .project-wrapper {
 	position: relative;
-	overflow: hidden; // Limits hover effect within the container
+	overflow: hidden;
 	transition: transform 0.3s ease;
-	width: 50%;
+	width: 100%;
+
+	@include md-min {
+		width: 50%;
+	}
+}
+
+.project-col {
+	width: 100%;
+
+	@include md-min {
+		width: 50%;
+	}
 }
 
 .project-img {
@@ -16,8 +29,12 @@
 	background-size: cover;
 	background-position: center;
 	aspect-ratio: 3/4;
-	max-height: 400px;
+	max-height: 300px;
 	width: 100%;
+
+	@include md-min {
+		max-height: 400px;
+	}
 }
 
 .project-img:before {
@@ -34,36 +51,31 @@
 }
 
 .project-img:hover {
-	transform: scale(1.1); // Scaling effect within the container
+	transform: scale(1.1);
 }
 
 .project-img:hover::before {
 	opacity: 0;
 }
 
-.project-info {
-	width: 50%;
-}
-
 .project__item {
 	position: relative;
-	opacity: 0; // Initially hidden for animation
-	transform: translateX(100px); // Slides in from the right by default
+	opacity: 0;
+	transform: translateX(100px);
 	transition: opacity 0.6s ease, transform 0.6s ease;
 
 	&.revert {
-		transform: translateX(-100px); // Slides in from the left for even items
+		transform: translateX(-100px);
 	}
 
 	&.visible {
 		opacity: 1;
-		transform: translateX(0); // Resets position when visible
+		transform: translateX(0);
 	}
 }
 
 .project {
 	cursor: pointer;
-	background-color: #c40914;
 	z-index: 22;
 	display: flex;
 	flex-direction: column;
@@ -76,6 +88,7 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
+		align-items: stretch;
 
 		.revert & {
 			flex-direction: row-reverse;
@@ -96,7 +109,7 @@
 	display: flex;
 	justify-content: center;
 	right: 0;
-	width: 50%;
+	width: 100%;
 	bottom: 0;
 	text-align: center;
 	padding: 10px 0;
@@ -105,6 +118,10 @@
 	.revert & {
 		right: auto;
 		left: 0;
+	}
+
+	@include md-min {
+		width: 50%;
 	}
 }
 
@@ -115,20 +132,25 @@
 
 .project-info {
 	position: relative;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .project-info__active {
 	position: absolute;
 	top: 0;
-	left: 0; // Takes full width
+	left: 0;
 	background-color: $color-white;
-	width: 100%; // Full width of project-info
-	height: 100%; // Full height of project-info
-	display: none; // Hidden initially
-	opacity: 0; // Hidden with opacity
-	transition: opacity 0.3s ease; // Smooth transition for opacity
-	z-index: 10; // Higher z-index for visibility on hover
+	width: 100%;
+	height: 102%;
+	display: none;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	z-index: 10;
 	border-right: 2px solid $color-red;
+	margin-top: -1px;
 
 	.revert & {
 		border-left: 2px solid $color-red;
@@ -139,13 +161,21 @@
 .project__item {
 	&:hover {
 		.project-info__active {
-			display: block; // Display info on hover
+			display: block;
 			width: 50%;
 			right: 0;
 			left: 50%;
-			opacity: 1; // Transition to full opacity
+			opacity: 1;
 			padding: 20px;
-			height: 100%;
+			height: 102%;
+
+			@include md-max {
+				width: 100%;
+				height: 52%;
+				left: 0;
+				top: 50%;
+				right: 0;
+			}
 		}
 	}
 
@@ -160,7 +190,7 @@
 }
 
 .project-info {
-	width: 50%;
+	width: 100%;
 	position: relative;
 }
 
@@ -191,16 +221,24 @@
 
 .project__item {
 	position: relative;
-	opacity: 0; // Initially hidden for animation
-	transform: translateX(30px); // Reduced distance for a subtler slide
+	opacity: 0;
+	transform: translateX(30px);
 	transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 
 	&.revert {
-		transform: translateX(-30px); // Reduced distance for left slide-in on even items
+		transform: translateX(-30px);
 	}
 
 	&.visible {
 		opacity: 1;
-		transform: translateX(0); // Resets to normal position
+		transform: translateX(0);
+	}
+}
+
+.project-col__bg {
+	background-color: $color-red;
+
+	@include md-max {
+		height: 300px;
 	}
 }

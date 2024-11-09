@@ -32,8 +32,8 @@ const Contact = () => {
 	return (
 		<>
 			<BigImage img={img} />
-			<div className='section' id='contact'>
-				<div className='section-col section-col__left'>
+			<div className='section' >
+				<div className='section-col section-col__left' id='contact'>
 					<Title text='sollen wir reden?' />
 				</div>
 				<div className='section-col section-col__right'>

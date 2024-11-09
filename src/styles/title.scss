@@ -15,4 +15,13 @@
 	.section-story & {
 		margin-top: 0;
 	}
+
+	.partners & {
+		@include content-width();
+		margin: 0 auto;
+	}
+
+	@include md-max {
+		margin: 30px 0;
+	}
 }

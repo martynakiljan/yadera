@@ -9,7 +9,7 @@
 
 html {
 	scroll-behavior: smooth;
-	scroll-padding-top: 100px;
+	scroll-padding-top: 50px;
 }
 
 body {
@@ -20,9 +20,6 @@ body {
 	font-size: 16px;
 }
 
-// .app {
-//     overflow-x: hidden;
-// }
 
 html,
 body,
@@ -93,13 +90,7 @@ input {
 	outline: none;
 }
 
-.title {
-	margin-bottom: 40px;
 
-	@include md-max {
-		margin: 40px 0;
-	}
-}
 
 .list-item {
 	& + .list-item {

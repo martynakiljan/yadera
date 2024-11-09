@@ -8,28 +8,26 @@ const ServicesDetails = () => {
 	const location = useLocation()
 	const serviceId = location.state?.serviceId
 	useEffect(() => {
-		// Instantly jump to the top of the page
-		window.scrollTo({ top: 0, behavior: 'instant' })
 
-		// After a short delay, scroll smoothly to the target section
+		window.scrollTo({ top: 0, behavior: 'instant' })
 		if (serviceId) {
 			const element = document.getElementById(serviceId)
 			if (element) {
 				setTimeout(() => {
 					element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-				}, 200) // Adjust delay as needed
+				}, 200) 
 			}
 		}
 	}, [serviceId])
 
 	return (
-		<div id='dienstleistungen'>
+		<div>
 			<BigImage img={img} />
 			<div className='services-details'>
 				<div className='section-col section-col__left'>
 					<Title text='Womit beschäftigen wir uns?' />
 				</div>
-				<div className='services-details__inner'>
+				<div className='services-details__inner' id='dienstleistungen'>
 					<div className='service-detail service-detail__1' id='service1'>
 						<h2 className='service-detail__title'>Fassadenarbeiten</h2>
 						<div className='service-detail__list list'>

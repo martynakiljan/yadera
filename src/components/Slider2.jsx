@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-
+import Title from './Title'
 import logo2 from '../assets/images/partners-logo/logo2.png'
 import logo3 from '../assets/images/partners-logo/logo3.png'
 import logo4 from '../assets/images/partners-logo/logo4.png'
@@ -37,18 +37,23 @@ const Slider2 = () => {
 	}, [])
 
 	return (
-		<div className='slider' id='projects'>
-			<div className='slider__inner slider__inner--logos' ref={sliderRef}>
-				{logos.concat(logos).map((image, index) => (
-					<div className='slider__item slider__item--logo' key={index}>
-						<div
-							className='slider__item slider__item--logo'
-							key={index}
-							style={{ backgroundImage: `url(${image})` }}
-							aria-label={`slider ${index + 1}`}
-						/>
-					</div>
-				))}
+		<div className='partners'>
+			<div className='section-col section-col__left'>
+				<Title text='unsere Partner' />
+			</div>
+			<div className='slider slider-partners' id='projects'>
+				<div className='slider__inner slider__inner--logos' ref={sliderRef}>
+					{logos.concat(logos).map((image, index) => (
+						<div className='slider__item slider__item--logo' key={index}>
+							<div
+								className='slider__item slider__item--logo'
+								key={index}
+								style={{ backgroundImage: `url(${image})` }}
+								aria-label={`slider ${index + 1}`}
+							/>
+						</div>
+					))}
+				</div>
 			</div>
 		</div>
 	)
