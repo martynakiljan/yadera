@@ -63,13 +63,11 @@ function App() {
 				<div className='sections'>
 					<Menu />
 					<Routes>
-						<Route exact path='/'>
 							<Route path='/' element={<Home />} />
 							<Route path='/uber-uns' element={<About />} />
 							<Route path='/dienstleistungen' element={<ServicesDetails />} />
 							<Route path='/projekte' element={<Projects />} />
 							<Route path='/contact' element={<Contact />} />
-						</Route>
 					</Routes>
 				</div>
 				<Footer />
