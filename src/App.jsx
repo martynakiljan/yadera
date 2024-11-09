@@ -20,7 +20,7 @@ function ScrollToPosition() {
 
 		window.scrollTo({
 			top: isHomePage ? 0 : window.innerHeight * 0.7,
-			behavior: 'smooth', 
+			behavior: 'smooth',
 		})
 	}, [location])
 
@@ -63,11 +63,13 @@ function App() {
 				<div className='sections'>
 					<Menu />
 					<Routes>
-						<Route path='/' element={<Home />} />
-						<Route path='/uber-uns' element={<About />} />
-						<Route path='/dienstleistungen' element={<ServicesDetails />} />
-						<Route path='/projekte' element={<Projects />} />
-						<Route path='/contact' element={<Contact />} />
+						<Route exact path='/'>
+							<Route path='/' element={<Home />} />
+							<Route path='/uber-uns' element={<About />} />
+							<Route path='/dienstleistungen' element={<ServicesDetails />} />
+							<Route path='/projekte' element={<Projects />} />
+							<Route path='/contact' element={<Contact />} />
+						</Route>
 					</Routes>
 				</div>
 				<Footer />
