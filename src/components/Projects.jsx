@@ -3,19 +3,45 @@ import BigImage from './BigImage'
 import Title from './Title'
 import projects from '../data/projects'
 import { IoIosArrowUp } from 'react-icons/io'
+
+import { useEffect } from 'react'
+
 const Projects = () => {
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			entries => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('visible')
+					} else {
+						entry.target.classList.remove('visible')
+					}
+				})
+			},
+			{
+				threshold: 0.1,
+			}
+		)
+
+		const projectItems = document.querySelectorAll('.project__item')
+		projectItems.forEach(item => observer.observe(item))
+
+		return () => {
+			projectItems.forEach(item => observer.unobserve(item))
+		}
+	}, [])
+
 	return (
 		<div id='projekte'>
 			<BigImage img={img} />
 			<div className='projects'>
-				<div className='section-col section-col__left '>
+				<div className='section-col section-col__left'>
 					<Title text='unsere projekte' />
 				</div>
-
 				<div className='projects__inner'>
 					{projects.map((project, index) => (
-						<div className={`project__item ${index % 2 !== 0 ? 'revert' : ''}`}>
-							<div className='project' key={index}>
+						<div key={index} className={`project__item ${index % 2 !== 0 ? 'revert' : ''}`}>
+							<div className='project'>
 								<div className='project-wrapper'>
 									<div className='project-img' style={{ backgroundImage: `url(${project.url})` }}></div>
 								</div>
@@ -40,9 +66,8 @@ const Projects = () => {
 									</div>
 								</div>
 							</div>
-
 							<div className='project__btn-more'>
-								<span className='project__btn-more-text'>mehr informationen </span>
+								<span className='project__btn-more-text'>mehr informationen</span>
 								<IoIosArrowUp />
 							</div>
 						</div>

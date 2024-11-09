@@ -102,9 +102,6 @@ input {
 }
 
 .list-item {
-	list-style: disc;
-	margin-left: 15px;
-
 	& + .list-item {
 		margin-top: 12px;
 	}
@@ -115,21 +112,12 @@ input {
 }
 
 .list-subtitle {
-	padding-bottom: 5px;
+	padding-bottom: 10px;
+	font-weight: 500;
 
 	&:nth-of-type(2) {
 		padding-top: 5px;
 	}
-}
-
-.sub-list-item {
-	list-style: disc;
-	margin-left: 35px;
-}
-
-.sub-sub-list-item {
-	margin-left: 45px;
-	list-style: disc;
 }
 
 .title-center {
@@ -144,4 +132,11 @@ a {
 	cursor: pointer;
 }
 
-
+li {
+	list-style: none;
+	margin-bottom: 5px;
+}
+.list-item:before {
+	margin-right: 5px;
+	content: '✓';
+}

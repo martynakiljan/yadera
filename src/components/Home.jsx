@@ -5,6 +5,8 @@ import Reviews from './Reviews'
 import Welcome from './Welcome'
 import Slider2 from './Slider2'
 import About from './About'
+import CountUp from './CountUp'
+
 const Home = () => {
 	return (
 		<>
@@ -12,6 +14,7 @@ const Home = () => {
 			<Welcome />
 			<Services />
 			<About />
+			<CountUp />
 			<Slider />
 			<Reviews />
 			<Slider2 />

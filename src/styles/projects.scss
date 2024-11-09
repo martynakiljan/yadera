@@ -5,10 +5,11 @@
 
 .project-wrapper {
 	position: relative;
-	overflow: hidden; // Ogranicza efekt animacji wewnątrz kontenera
+	overflow: hidden; // Limits hover effect within the container
 	transition: transform 0.3s ease;
 	width: 50%;
 }
+
 .project-img {
 	position: relative;
 	background-repeat: no-repeat;
@@ -33,7 +34,7 @@
 }
 
 .project-img:hover {
-	transform: scale(1.1); // Efekt skalowania jest teraz ograniczony do kontenera
+	transform: scale(1.1); // Scaling effect within the container
 }
 
 .project-img:hover::before {
@@ -46,6 +47,18 @@
 
 .project__item {
 	position: relative;
+	opacity: 0; // Initially hidden for animation
+	transform: translateX(100px); // Slides in from the right by default
+	transition: opacity 0.6s ease, transform 0.6s ease;
+
+	&.revert {
+		transform: translateX(-100px); // Slides in from the left for even items
+	}
+
+	&.visible {
+		opacity: 1;
+		transform: translateX(0); // Resets position when visible
+	}
 }
 
 .project {
@@ -62,7 +75,6 @@
 	@include md-min {
 		flex-direction: row;
 		align-items: center;
-
 		justify-content: space-between;
 
 		.revert & {
@@ -85,9 +97,7 @@
 	justify-content: center;
 	right: 0;
 	width: 50%;
-	display: flex;
 	bottom: 0;
-	left: auto;
 	text-align: center;
 	padding: 10px 0;
 	color: $color-white;
@@ -110,24 +120,14 @@
 .project-info__active {
 	position: absolute;
 	top: 0;
-	left: 50%;
-	right: 0;
-	background-color: white;
-	width: 50%;
-}
-
-.project-info__active {
-	position: absolute;
-	top: 0;
-	left: 0; // Zmiana, aby zająć całą przestrzeń
+	left: 0; // Takes full width
 	background-color: $color-white;
-	width: 100%; // Zajmuje całą szerokość project-info
-	height: 100%; // Zajmuje całą wysokość project-info
-	display: none; // Początkowo ukryte
-	opacity: 0; // Ukryte przez opacity
-	transition: opacity 0.3s ease; // Płynne przejście
-	z-index: 10; // Ustawiamy wyższy z-index, aby info było na wierzchu
-
+	width: 100%; // Full width of project-info
+	height: 100%; // Full height of project-info
+	display: none; // Hidden initially
+	opacity: 0; // Hidden with opacity
+	transition: opacity 0.3s ease; // Smooth transition for opacity
+	z-index: 10; // Higher z-index for visibility on hover
 	border-right: 2px solid $color-red;
 
 	.revert & {
@@ -139,11 +139,11 @@
 .project__item {
 	&:hover {
 		.project-info__active {
-			display: block; // Po hover wyświetlamy "info"
+			display: block; // Display info on hover
 			width: 50%;
 			right: 0;
 			left: 50%;
-			opacity: 1; // Płynne przejście do pełnej widoczności
+			opacity: 1; // Transition to full opacity
 			padding: 20px;
 			height: 100%;
 		}
@@ -158,8 +158,9 @@
 		}
 	}
 }
+
 .project-info {
-	width: 50%; // Możesz dostosować w razie potrzeby
+	width: 50%;
 	position: relative;
 }
 
@@ -186,4 +187,20 @@
 
 .project-info-text__title {
 	font-weight: 500;
+}
+
+.project__item {
+	position: relative;
+	opacity: 0; // Initially hidden for animation
+	transform: translateX(30px); // Reduced distance for a subtler slide
+	transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+
+	&.revert {
+		transform: translateX(-30px); // Reduced distance for left slide-in on even items
+	}
+
+	&.visible {
+		opacity: 1;
+		transform: translateX(0); // Resets to normal position
+	}
 }

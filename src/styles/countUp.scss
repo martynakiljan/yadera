@@ -1,0 +1,16 @@
+.count-up {
+	border-top: 4px solid $color-red;
+
+	span.link-text {
+		font-size: 18px;
+	}
+}
+
+.count-up__number {
+	font-size: 120px;
+	font-weight: 700;
+}
+
+.count-up__text {
+	font-size: 25px;
+}

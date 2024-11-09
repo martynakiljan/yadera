@@ -33,7 +33,7 @@ const About = () => {
 									arbeiten zuverlässig, zügig und effizient. Die Qualität ist unsere Visitenkarte, das erachten wir als
 									Selbstverständlichkeit. Wir übernehmen Verantwortung in Bezug auf Termin, Qualität und Preis.
 								</span>
-								<Link />
+								<Link text='Ich will mehr wissen' />
 							</p>
 						</div>
 					</div>
