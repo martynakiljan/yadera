@@ -68,6 +68,7 @@ function App() {
 							<Route path='/dienstleistungen' element={<ServicesDetails />} />
 							<Route path='/projekte' element={<Projects />} />
 							<Route path='/contact' element={<Contact />} />
+							<Route path="/*" element={<Navigate to="/" />} />
 					</Routes>
 				</div>
 				<Footer />
