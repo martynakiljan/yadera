@@ -7,13 +7,14 @@ import Footer from './components/Footer'
 import { motion, useScroll } from 'framer-motion'
 import Contact from './components/Contact'
 import './styles/all.scss'
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, useLocation, Navigate } from 'react-router-dom'
 import Projects from './components/Projects'
 import Home from './components/Home'
 import Preloader from './components/Preloader'
 
 function ScrollToPosition() {
 	const location = useLocation()
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		const isHomePage = location.pathname === '/'
