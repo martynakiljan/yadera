@@ -1,0 +1,144 @@
+.menu {
+	position: fixed;
+	top: 0;
+	z-index: 111;
+	width: 100%;
+	padding: 10px 0;
+	background-color: rgba(255, 255, 255, 0.2);
+	transition: background-color 0.3s ease, color 0.3s ease;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+	&.scrolled {
+		background-color: $color-white;
+
+		border-color: rgba(0, 0, 0, 0.1);
+
+		.menu__link {
+			color: black;
+		}
+
+		.hamburger-react {
+			color: black;
+		}
+	}
+}
+
+.menu__inner {
+	padding: 0 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 100vw;
+
+	@include sm-min {
+		padding: 0 40px;
+	}
+
+	@include md-min {
+		@include content-width();
+	}
+}
+
+.menu__logo {
+	width: 130px;
+	height: 50px;
+}
+
+.menu__list {
+	max-width: 100vw;
+	position: absolute;
+	top: 0;
+	padding-top: 100px !important;
+	bottom: 0;
+	height: 100vh;
+	left: 0;
+	width: 100%;
+	background-color: white;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	opacity: 0;
+	transform: translateY(-10px);
+	visibility: hidden;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu__list.open {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.menu__li {
+	padding: 15px 20px;
+	text-align: center;
+}
+
+.menu__link {
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 20px;
+	display: block;
+	letter-spacing: 1px;
+	color: $color-white;
+	transition: color 0.3s ease;
+
+	.open & {
+		color: black;
+		text-align: center;
+		text-transform: lowercase;
+		margin: 0 auto;
+		font-size: 20px;
+	}
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.menu__hamburger {
+	cursor: pointer;
+}
+
+.menu__link--contact {
+	text-transform: uppercase;
+	width: 130px;
+	font-size: 12px;
+
+	.menu__link {
+		.menu-open & {
+			text-transform: lowercase;
+			text-align: center;
+		}
+	}
+}
+
+.menu__link--phone {
+	color: inherit;
+}
+
+.hamburger-react {
+	color: $color-white;
+	z-index: 111 !important;
+
+	.open & {
+		color: black;
+	}
+}
+
+.menu__link--footer {
+	font-size: 12px;
+}
+
+.menu-contact {
+	@include md-max {
+		display: none;
+	}
+}
+
+.menu__link--contact {
+	&:hover {
+		text-decoration: none;
+	}
+}
