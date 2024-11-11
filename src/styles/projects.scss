@@ -101,7 +101,7 @@
 	text-transform: uppercase;
 	font-weight: 400;
 	font-size: 30px;
-	color: white;
+	color: $color-white
 }
 
 .project__btn-more {
@@ -147,7 +147,7 @@
 	height: 102%;
 	display: none;
 	opacity: 0;
-	transition: opacity 0.3s ease;
+	transition: opacity 0.5s ease-in-out; 
 	z-index: 10;
 	border-right: 2px solid $color-red;
 	margin-top: -1px;
@@ -223,7 +223,7 @@
 	position: relative;
 	opacity: 0;
 	transform: translateX(30px);
-	transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+	transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 
 	&.revert {
 		transform: translateX(-30px);
