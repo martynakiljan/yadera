@@ -108,9 +108,14 @@
 
 .sub-list__columns {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	gap: 50px;
 	padding-bottom: 30px;
+
+	@include md-min {
+		flex-direction: row;
+	}
 }
 
 .fade-out {

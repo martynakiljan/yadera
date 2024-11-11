@@ -14,7 +14,6 @@ import Preloader from './components/Preloader'
 
 function ScrollToPosition() {
 	const location = useLocation()
-	const navigate = useNavigate()
 
 	useEffect(() => {
 		const isHomePage = location.pathname === '/'

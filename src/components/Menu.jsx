@@ -44,23 +44,31 @@ function Menu() {
 							</NavLink>
 						</li>
 						<li className='menu__li'>
-							<NavLink className='menu__link' to='/uber-uns' onClick={closeMenu}>
+							<NavLink className='menu__link' to='/uber-uns' onClick={closeMenu} state={{ scrollToId: 'uber-uns' }}>
 								über uns
 							</NavLink>
 						</li>
 						<li className='menu__li'>
-							<NavLink className='menu__link' to='/dienstleistungen' onClick={closeMenu}>
+							<NavLink
+								className='menu__link'
+								to='/dienstleistungen'
+								state={{ scrollToId: 'dienstleistungen' }}
+								onClick={closeMenu}>
 								dienstleistungen
 							</NavLink>
 						</li>
 						<li className='menu__li'>
-							<NavLink className='menu__link' to='/projekte' onClick={closeMenu}>
+							<NavLink className='menu__link' to='/projekte' onClick={closeMenu} state={{ scrollToId: 'projekte' }}>
 								projekte
 							</NavLink>
 						</li>
 
 						<li className='menu__li'>
-							<NavLink className='menu__link menu__link--contact' to='/contact' onClick={closeMenu}>
+							<NavLink
+								className='menu__link menu__link--contact'
+								to='/kontakt'
+								onClick={closeMenu}
+								state={{ scrollToId: 'kontakt' }}>
 								kontakt
 							</NavLink>
 						</li>

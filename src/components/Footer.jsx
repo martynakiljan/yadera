@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
 	return (
@@ -12,30 +13,36 @@ const Footer = () => {
 				<div className='footer__col'>
 					<ul className='menu__list-footer'>
 						<li className='menu__li'>
-							<a className='menu__link menu__link--footer' href='#home'>
+							<NavLink className='menu__link menu__link--footer' to='/'>
 								home
-							</a>
+							</NavLink>
 						</li>
 						<li className='menu__li'>
-							<a className='menu__link menu__link--footer' href='#about'>
+							<NavLink className='menu__link menu__link--footer' to='/uber-uns' state={{ scrollToId: 'about' }}>
 								über uns
-							</a>
+							</NavLink>
 						</li>
 						<li className='menu__li'>
-							<a className='menu__link menu__link--footer' href='#services'>
+							<NavLink
+								className='menu__link menu__link--footer'
+								to='/dienstleistungen'
+								state={{ scrollToId: 'services' }}>
 								dienstleistungen
-							</a>
+							</NavLink>
 						</li>
 						<li className='menu__li'>
-							<a className='menu__link menu__link--footer' href='#projects'>
+							<NavLink
+								className='menu__link menu__link--footer'
+								to='/projekte'
+								state={{ scrollToId: 'projects' }}>
 								projekte
-							</a>
+							</NavLink>
 						</li>
-			
+
 						<li className='menu__li'>
-							<a className='menu__link menu__link--footer' href='#contact'>
+							<NavLink className='menu__link menu__link--footer' to='/kontakt' state={{ scrollToId: 'contact' }}>
 								kontakt
-							</a>
+							</NavLink>
 						</li>
 					</ul>
 				</div>

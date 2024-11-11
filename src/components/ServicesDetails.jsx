@@ -6,19 +6,19 @@ import { useLocation } from 'react-router-dom'
 
 const ServicesDetails = () => {
 	const location = useLocation()
-	const serviceId = location.state?.serviceId
-	useEffect(() => {
+	const scrollToId = location.state?.scrollToId
 
-		window.scrollTo({ top: 0, behavior: 'instant' })
-		if (serviceId) {
-			const element = document.getElementById(serviceId)
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'instant' }) 
+		if (scrollToId) {
+			const element = document.getElementById(scrollToId)
 			if (element) {
 				setTimeout(() => {
 					element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-				}, 200) 
+				}, 200)
 			}
 		}
-	}, [serviceId])
+	}, [scrollToId])
 
 	return (
 		<div>

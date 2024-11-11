@@ -13,12 +13,6 @@
 		margin: 70px auto;
 		gap: 50px;
 	}
-
-	&.section-story {
-		@include md-max {
-			margin-top: 0px;
-		}
-	}
 }
 
 .section-col__left {
