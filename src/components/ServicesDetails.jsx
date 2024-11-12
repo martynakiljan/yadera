@@ -8,10 +8,8 @@ const ServicesDetails = () => {
 	const location = useLocation()
 
 	useEffect(() => {
-		// Sprawdza, czy jest przekazany scrollToId lub serviceId w stanie
 		const scrollToId = location.state?.scrollToId || location.state?.serviceId
 		if (scrollToId) {
-			// Szuka elementu z danym ID i scrolluje do niego
 			const element = document.getElementById(scrollToId)
 			if (element) {
 				element.scrollIntoView({ behavior: 'smooth' })
@@ -21,11 +19,11 @@ const ServicesDetails = () => {
 	return (
 		<div>
 			<BigImage img={img} />
-			<div className='services-details'>
+			<div className='services-details' id='dienstleistungen'>
 				<div className='section-col section-col__left'>
 					<Title text='Womit beschäftigen wir uns?' />
 				</div>
-				<div className='services-details__inner' id='dienstleistungen'>
+				<div className='services-details__inner'>
 					<div className='service-detail service-detail__1' id='service1'>
 						<h2 className='service-detail__title'>Fassadenarbeiten</h2>
 						<div className='service-detail__list list'>
