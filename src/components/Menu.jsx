@@ -58,7 +58,8 @@ function Menu() {
 							</NavLink>
 						</li>
 						<li className='menu__li'>
-							<NavLink className='menu__link' to='/projekte' onClick={closeMenu} state={{ scrollToId: 'projekte' }}>
+							<NavLink className='menu__link' to='/projekte' onClick={closeMenu}
+							 state={{ scrollToId: 'projekte' }}>
 								projekte
 							</NavLink>
 						</li>

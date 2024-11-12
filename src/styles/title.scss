@@ -24,4 +24,8 @@
 	@include md-max {
 		margin: 30px 0;
 	}
+
+	@include sm-max {
+		width: 70%;
+	}
 }

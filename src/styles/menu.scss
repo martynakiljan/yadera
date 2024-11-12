@@ -14,11 +14,11 @@
 		border-color: rgba(0, 0, 0, 0.1);
 
 		.menu__link {
-			color: black;
+			color: $color-main;
 		}
 
 		.hamburger-react {
-			color: black;
+			color: $color-main;
 		}
 	}
 }
@@ -116,6 +116,18 @@
 
 .menu__link--phone {
 	color: inherit;
+
+	.scrolled & {
+		color: $color-main;
+	}
+}
+
+.fa-phone-volume {
+	color: inherit;
+
+	.scrolled & {
+		color: $color-main;
+	}
 }
 
 .hamburger-react {
@@ -123,7 +135,7 @@
 	z-index: 111 !important;
 
 	.open & {
-		color: black;
+		color: $color-main;
 	}
 }
 

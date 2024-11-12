@@ -15,7 +15,7 @@ import logo13 from '../assets/images/partners-logo/logo13.png'
 
 const logos = [logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10, logo11, logo12, logo13]
 
-const Slider2 = () => {
+const SliderLogos = () => {
 	const sliderRef = useRef(null)
 
 	useEffect(() => {
@@ -59,4 +59,4 @@ const Slider2 = () => {
 	)
 }
 
-export default Slider2
+export default SliderLogos

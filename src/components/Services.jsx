@@ -10,8 +10,8 @@ const Services = () => {
 		setFadeOut(true)
 
 		setTimeout(() => {
-			navigate('/dienstleistungen', { state: { serviceId } })
-		}, 500) 
+			navigate('/dienstleistungen', { state: { serviceId } }) 
+		}, 500)
 	}
 
 	return (

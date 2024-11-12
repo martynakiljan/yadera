@@ -40,10 +40,6 @@ function App() {
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll)
 
-		setTimeout(() => {
-			setLoading(false)
-		}, 3000)
-
 		return () => {
 			window.removeEventListener('scroll', handleScroll)
 		}
@@ -67,7 +63,7 @@ function App() {
 						<Route path='/uber-uns' element={<About />} />
 						<Route path='/dienstleistungen' element={<ServicesDetails />} />
 						<Route path='/projekte' element={<Projects />} />
-						<Route path='/contact' element={<Contact />} />
+						<Route path='/kontakt' element={<Contact />} />
 						<Route path='/*' element={<Navigate to='/' />} />
 					</Routes>
 				</div>

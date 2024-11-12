@@ -6,20 +6,18 @@ import { useLocation } from 'react-router-dom'
 
 const ServicesDetails = () => {
 	const location = useLocation()
-	const scrollToId = location.state?.scrollToId
 
 	useEffect(() => {
-		window.scrollTo({ top: 0, behavior: 'instant' }) 
+		// Sprawdza, czy jest przekazany scrollToId lub serviceId w stanie
+		const scrollToId = location.state?.scrollToId || location.state?.serviceId
 		if (scrollToId) {
+			// Szuka elementu z danym ID i scrolluje do niego
 			const element = document.getElementById(scrollToId)
 			if (element) {
-				setTimeout(() => {
-					element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-				}, 200)
+				element.scrollIntoView({ behavior: 'smooth' })
 			}
 		}
-	}, [scrollToId])
-
+	}, [location])
 	return (
 		<div>
 			<BigImage img={img} />

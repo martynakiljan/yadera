@@ -48,7 +48,8 @@
 .link-icon {
 	padding: 0 10px;
 	display: inline-flex;
-	font-size: 22px;
+	font-size: 15px;
+	color: $color-main;
 
 	@include md-max {
 		font-size: 13px;

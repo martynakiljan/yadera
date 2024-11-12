@@ -6,7 +6,7 @@
 .service__inner {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 	flex-wrap: wrap;
 	gap: 10px;
 
@@ -21,7 +21,7 @@
 	overflow: hidden;
 
 	@include md-min {
-		width: calc(50% - 20px);
+		width: calc(50% - 10px);
 	}
 }
 
@@ -100,10 +100,20 @@
 	padding: 30px;
 	font-size: 22px;
 	letter-spacing: 3px;
+
+	@include md-max {
+		padding-left: 0;
+		font-size: 18px;
+		text-align: left;
+	}
 }
 
 .service-detail__list {
 	padding: 30px 0;
+
+	@include sm-max {
+		padding: 0;
+	}
 }
 
 .sub-list__columns {

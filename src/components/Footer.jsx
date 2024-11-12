@@ -31,16 +31,13 @@ const Footer = () => {
 							</NavLink>
 						</li>
 						<li className='menu__li'>
-							<NavLink
-								className='menu__link menu__link--footer'
-								to='/projekte'
-								state={{ scrollToId: 'projects' }}>
+							<NavLink className='menu__link menu__link--footer' to='/projekte' state={{ scrollToId: 'projects' }}>
 								projekte
 							</NavLink>
 						</li>
 
 						<li className='menu__li'>
-							<NavLink className='menu__link menu__link--footer' to='/kontakt' state={{ scrollToId: 'contact' }}>
+							<NavLink className='menu__link menu__link--footer' to='/kontakt' state={{ scrollToId: 'kontakt' }}>
 								kontakt
 							</NavLink>
 						</li>

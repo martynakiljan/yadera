@@ -1,93 +1,93 @@
 .images {
-    position: relative;
-    display: none;
+	position: relative;
+	display: none;
 
-    @include md-min {
-        display: block;
-    }
+	@include md-min {
+		display: block;
+	}
 }
 
 .images-mobile-wrapper {
-    overflow-x: clip;
-    // position: relative;
-    height: 340vh;
+	overflow-x: clip;
+	// position: relative;
+	height: 340vh;
 
-    @include md-min {
-        display: none;
-    }
+	@include md-min {
+		display: none;
+	}
 }
 
 .images-mobile {
-    position: sticky;
-    top: 10vh;
-    height: 85vh;
+	position: sticky;
+	top: 10vh;
+	height: 85vh;
 }
 
 .images-mobile-inner {
-    display: flex;
-    .image {
-        flex: 1 0 100%;
-        // width: 100vw;
-        height: 85vh;
-        transform: scale(1);
-    }
+	display: flex;
+	.image {
+		flex: 1 0 100%;
+		// width: 100vw;
+		height: 85vh;
+		transform: scale(1);
+	}
 }
 
 .image {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transform: scale(0.8);
-    transition: transform 0.4s ease-out;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	transform: scale(0.8);
+	transition: transform 0.4s ease-out;
 }
 
 .image--visible {
-    transform: scale(1);
+	transform: scale(1);
 }
 
 .images__inner {
-    display: flex;
-    gap: 15px;
-    justify-content: space-between;
+	display: flex;
+	gap: 15px;
+	justify-content: space-between;
 }
 
 .image_1 {
-    background-image: url(../assets/images/images/image1.jpeg);
-    width: 100%;
-    height: 600px;
+	background-image: url(../assets/images/images/image1.jpeg);
+	width: 100%;
+	height: 600px;
 
-    @include md-min {
-        width: 50%;
-    }
+	@include md-min {
+		width: 50%;
+	}
 }
 .image_2 {
-    background-image: url(../assets/images/images/image2.jpeg);
-    width: 100%;
-    height: 300px;
+	background-image: url(../assets/images/images/image2.jpeg);
+	width: 100%;
+	height: 300px;
 
-    @include md-min {
-        width: 25%;
-    }
+	@include md-min {
+		width: 25%;
+	}
 }
 .image_3 {
-    background-image: url(../assets/images/images/image3.jpeg);
-    width: 100%;
-    height: 300px;
+	background-image: url(../assets/images/images/image3.jpeg);
+	width: 100%;
+	height: 300px;
 
-    @include md-min {
-        width: 25%;
-    }
+	@include md-min {
+		width: 25%;
+	}
 }
 
 .big-image {
-    height: 80vh;
-    width: 100vw;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+	height: 80vh;
+	width: 100vw;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 }
 
 .big-image-container {
-    position: relative;
-    overflow-y: clip;
+	position: relative;
+	overflow-x: hidden;
 }
