@@ -43,6 +43,17 @@ const Footer = () => {
 						</li>
 					</ul>
 				</div>
+
+				<div className='contact__col'>
+					<div>
+						<FontAwesomeIcon icon={faLocationDot} />
+					</div>
+					<a href='https://maps.app.goo.gl/9P5jcE5JLoMsr5b78'>
+						<p className='contact__title'>Standort</p>
+						<p className='contact__street'>Dorfstrasse 11a</p>
+						<p className='contact__city'>8603 Schwerzenbach</p>
+					</a>
+				</div>
 				<div className='footer__col'>
 					<div>
 						<FontAwesomeIcon icon={faPhone} />
@@ -57,16 +68,6 @@ const Footer = () => {
 							info@yadera.ch
 						</a>
 					</div>
-				</div>
-				<div className='contact__col'>
-					<div>
-						<FontAwesomeIcon icon={faLocationDot} />
-					</div>
-					<a href='https://maps.app.goo.gl/9P5jcE5JLoMsr5b78'>
-						<p className='contact__title'>Standort</p>
-						<p className='contact__street'>Dorfstrasse 11a</p>
-						<p className='contact__city'>8603 Schwerzenbach</p>
-					</a>
 				</div>
 			</div>
 			<p className='footer-copy'>Copyright © 2024 Yadera GmbH </p>

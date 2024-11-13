@@ -6,6 +6,7 @@ import Welcome from './Welcome'
 import SliderLogos from './SliderLogos'
 import About from './About'
 import CountUp from './CountUp'
+import ContactWidget from './ContactWidget'
 
 const Home = () => {
 	return (
@@ -18,6 +19,7 @@ const Home = () => {
 			<Slider />
 			<Reviews />
 			<SliderLogos />
+			<ContactWidget/>
 		</>
 	)
 }

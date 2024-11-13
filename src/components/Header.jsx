@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
-
+import { NavLink } from 'react-router-dom'
 const Header = () => {
 	const ref = useRef(null)
 
@@ -23,7 +23,12 @@ const Header = () => {
 					}}
 					className='header__image'>
 					<motion.div className='header__title' style={{ opacity }}>
-						<h1 className='header__text'>Das Fassaden und Maller Team.</h1>
+						<div className='header__text-wrapper'>
+							<h1 className='header__text'>Das Fassaden und Maller Team.</h1>
+							<NavLink to='/kontakt' className='header__button'>
+								Jetzt Angebot anfordern!
+							</NavLink>
+						</div>
 					</motion.div>
 				</motion.div>
 			</div>
