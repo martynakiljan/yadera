@@ -1,17 +1,13 @@
-import { MdOutlineEmail } from 'react-icons/md'
-
-import { IoIosPhonePortrait } from 'react-icons/io'
+import { FaWhatsapp } from 'react-icons/fa'
 import { NavLink } from 'react-router-dom'
+
+
 const ContactWidget = () => {
 	return (
 		<div className='contact-widget'>
 			<NavLink to='/kontakt'>
-				<MdOutlineEmail />
+				<FaWhatsapp />
 			</NavLink>
-
-			<a href='tel:+41791332929'>
-				<IoIosPhonePortrait />
-			</a>
 		</div>
 	)
 }

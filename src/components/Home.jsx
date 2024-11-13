@@ -19,7 +19,6 @@ const Home = () => {
 			<Slider />
 			<Reviews />
 			<SliderLogos />
-			<ContactWidget/>
 		</>
 	)
 }

@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation, Navigate, useNavig
 import Projects from './components/Projects'
 import Home from './components/Home'
 import Preloader from './components/Preloader'
-
+import ContactWidget from './components/ContactWidget'
 function ScrollToPosition() {
 	const location = useLocation()
 
@@ -66,6 +66,7 @@ function App() {
 						<Route path='/kontakt' element={<Contact />} />
 						<Route path='/*' element={<Navigate to='/' />} />
 					</Routes>
+					<ContactWidget />
 				</div>
 				<Footer />
 			</div>

@@ -4,7 +4,7 @@
 	z-index: 111;
 	width: 100%;
 	padding: 10px 0;
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.1);
 	transition: background-color 0.3s ease, color 0.3s ease;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 
@@ -82,6 +82,7 @@
 	display: block;
 	letter-spacing: 1px;
 	color: $color-white;
+	position: relative;
 	transition: color 0.3s ease;
 
 	.open & {
@@ -92,8 +93,28 @@
 		font-size: 20px;
 	}
 
+	.menu__list-desktop & {
+		font-size: 14px;
+		text-transform: uppercase;
+	}
+
 	&:hover {
-		text-decoration: underline;
+		color: $color-white;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 1px;
+		background-color: $color-white;
+		transition: width 0.3s ease;
+	}
+
+	&:hover::after {
+		width: 100%;
 	}
 }
 
@@ -104,6 +125,11 @@
 .menu__link--contact {
 	text-transform: uppercase;
 	width: 130px;
+
+	.menu__li-desktop & {
+		text-transform: lowercase;
+	}
+
 	font-size: 12px;
 
 	.menu__link {
@@ -152,5 +178,44 @@
 .menu__link--contact {
 	&:hover {
 		text-decoration: none;
+	}
+}
+
+.menu__desktop {
+	display: none;
+	width: 100%;
+
+	@include md-min {
+		display: block;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 15px;
+	}
+}
+
+.menu__list-desktop {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: nowrap;
+}
+
+.menu__logo-wrapper-mobile {
+	@include md-min {
+		display: none;
+	}
+}
+
+.menu__mobile {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.menu__mobile {
+	@include md-min {
+		display: none;
 	}
 }

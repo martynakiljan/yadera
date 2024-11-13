@@ -7,7 +7,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	gap: 10px;
 
 	@include md-min {
@@ -76,14 +76,14 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	font-size: 25px;
+	font-size: 20px;
 	text-transform: uppercase;
 	z-index: 11;
 	color: $color-white;
 	font-weight: 400;
 
 	@include md-min {
-		font-size: 40px;
+		font-size: 20px;
 	}
 }
 
