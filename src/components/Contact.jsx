@@ -64,6 +64,16 @@ const Contact = () => {
 									{errors.email && <p className='error-message'>{errors.email.message}</p>}
 								</div>
 								<div className='form-group'>
+									<label htmlFor='email'>Telefon</label>
+									<input
+										id='phone'
+										type='phone'
+										placeholder='+41 767 342 245'
+										{...register('phone', { required: 'Telefon ist erforderlich' })}
+									/>
+									{errors.email && <p className='error-message'>{errors.email.message}</p>}
+								</div>
+								<div className='form-group'>
 									<label htmlFor='message'>Nachricht</label>
 									<textarea
 										id='message'

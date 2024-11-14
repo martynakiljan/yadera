@@ -29,5 +29,11 @@
 		width: 70%;
 		margin-left: 0;
 		margin-right: auto;
+
+		.partners & {
+			@include md-max {
+				width: 100%;
+			}
+		}
 	}
 }

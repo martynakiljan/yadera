@@ -6,4 +6,9 @@
 	background-image: url(../assets/images/logo/logo.png);
 	width: 130px;
 	height: 50px;
+	background-position: center;
+
+	@include md-max {
+		background-position: left;
+	}
 }
