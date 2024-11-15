@@ -134,3 +134,9 @@ li {
 .sections {
 	overflow: hidden;
 }
+
+.sub-list__col {
+	@include md-max {
+		font-size: 13px;
+	}
+}

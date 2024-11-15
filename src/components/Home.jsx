@@ -7,10 +7,9 @@ import SliderLogos from './SliderLogos'
 import About from './About'
 import CountUp from './CountUp'
 
-
 const Home = () => {
 	return (
-		<>
+		<div id='home'>
 			<Header />
 			<Welcome />
 			<Services />
@@ -19,7 +18,7 @@ const Home = () => {
 			<Slider />
 			<Reviews />
 			<SliderLogos />
-		</>
+		</div>
 	)
 }
 

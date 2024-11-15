@@ -14,7 +14,7 @@ const Header = () => {
 	const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
 	return (
-		<div className='header' id='home'>
+		<div className='header'>
 			<div className='header__inner' ref={ref}>
 				<motion.div
 					style={{
