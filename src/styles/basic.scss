@@ -9,7 +9,7 @@
 
 html {
 	scroll-behavior: smooth;
-	scroll-padding-top: 50px;
+	scroll-padding-top: 70px;
 
 	@include md-max {
 		scroll-padding-top: 0;
@@ -129,4 +129,8 @@ li {
 .list-item:before {
 	margin-right: 5px;
 	content: '✓';
+}
+
+.sections {
+	overflow: hidden;
 }

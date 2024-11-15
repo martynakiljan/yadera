@@ -10,13 +10,13 @@ const Services = () => {
 		setFadeOut(true)
 
 		setTimeout(() => {
-			navigate('/dienstleistungen', { state: { serviceId } }) 
+			navigate('/dienstleistungen', { state: { serviceId } })
 		}, 500)
 	}
 
 	return (
 		<div className={`services ${fadeOut ? 'fade-out' : ''}`}>
-			<div className='section-col section-col__left'>
+			<div className='section-col section-col__left' id='diensteilungen'>
 				<Title text='Womit beschäftigen wir uns?' />
 			</div>
 			<div className='service__inner'>

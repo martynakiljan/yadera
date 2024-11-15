@@ -34,10 +34,10 @@ const Projects = () => {
 		<div>
 			<BigImage img={img} />
 			<div className='projects'>
-				<div className='section-col section-col__left'>
+				<div className='section-col section-col__left' id='projekte'>
 					<Title text='unsere projekte' />
 				</div>
-				<div className='projects__inner' id='projekte'>
+				<div className='projects__inner'>
 					{projects.map((project, index) => (
 						<div key={index} className={`project__item ${index % 2 !== 0 ? 'revert' : ''}`}>
 							<div className='project'>

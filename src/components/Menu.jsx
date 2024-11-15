@@ -2,11 +2,12 @@ import { useState, useEffect } from 'react'
 import { Rotate as Hamburger } from 'hamburger-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 function Menu() {
 	const [isOpen, setIsOpen] = useState(false)
 	const [scrolled, setScrolled] = useState(false)
+	const [isMobile, setIsMobile] = useState(window.innerWidth < 996)
 
 	const toggleMenu = () => {
 		setIsOpen(!isOpen)
@@ -16,6 +17,7 @@ function Menu() {
 		setIsOpen(false)
 	}
 
+	// Detect scroll for menu styling
 	useEffect(() => {
 		const handleScroll = () => {
 			setScrolled(window.scrollY > 50)
@@ -26,6 +28,35 @@ function Menu() {
 			window.removeEventListener('scroll', handleScroll)
 		}
 	}, [])
+
+	// Update `isMobile` state based on window width
+	useEffect(() => {
+		const handleResize = () => {
+			setIsMobile(window.innerWidth < 996)
+		}
+
+		window.addEventListener('resize', handleResize)
+		return () => {
+			window.removeEventListener('resize', handleResize)
+		}
+	}, [])
+
+	const navigate = useNavigate()
+
+	const handleNavigation = (path, scrollToId) => {
+		if (isMobile) {
+			// Navigate to the page and ensure the scroll is reset after rendering
+			navigate(path)
+			setTimeout(() => {
+				window.scrollTo(0, 0) // Ensure scroll starts at the top
+			}, 0) // Delayed to allow the page transition to complete
+			closeMenu()
+		} else {
+			// For desktop, navigate with scrollToId
+			navigate(path, { state: { scrollToId } })
+			closeMenu()
+		}
+	}
 
 	return (
 		<div className={`menu ${scrolled ? 'scrolled' : ''}`}>
@@ -40,38 +71,31 @@ function Menu() {
 					{isOpen && (
 						<ul className={`menu__list ${isOpen ? 'open' : ''}`}>
 							<li className='menu__li'>
-								<NavLink className='menu__link' to='/' onClick={closeMenu}>
+								<span className='menu__link' onClick={() => handleNavigation('/', null)}>
 									home
-								</NavLink>
+								</span>
 							</li>
 							<li className='menu__li'>
-								<NavLink className='menu__link' to='/uber-uns' onClick={closeMenu} state={{ scrollToId: 'uber-uns' }}>
+								<span className='menu__link' onClick={() => handleNavigation('/uber-uns', 'uber-uns')}>
 									über uns
-								</NavLink>
+								</span>
 							</li>
 							<li className='menu__li'>
-								<NavLink
-									className='menu__link'
-									to='/dienstleistungen'
-									state={{ scrollToId: 'dienstleistungen' }}
-									onClick={closeMenu}>
+								<span className='menu__link' onClick={() => handleNavigation('/dienstleistungen', 'dienstleistungen')}>
 									dienstleistungen
-								</NavLink>
+								</span>
 							</li>
 							<li className='menu__li'>
-								<NavLink className='menu__link' to='/projekte' onClick={closeMenu} state={{ scrollToId: 'projekte' }}>
+								<span className='menu__link' onClick={() => handleNavigation('/projekte', 'projekte')}>
 									projekte
-								</NavLink>
+								</span>
 							</li>
-
 							<li className='menu__li'>
-								<NavLink
+								<span
 									className='menu__link menu__link--contact'
-									to='/kontakt'
-									onClick={closeMenu}
-									state={{ scrollToId: 'kontakt' }}>
+									onClick={() => handleNavigation('/kontakt', 'kontakt')}>
 									kontakt
-								</NavLink>
+								</span>
 							</li>
 						</ul>
 					)}
@@ -96,40 +120,26 @@ function Menu() {
 							</NavLink>
 						</li>
 						<li className='menu__li-desktop'>
-							<NavLink className='menu__link' to='/uber-uns' onClick={closeMenu} state={{ scrollToId: 'uber-uns' }}>
+							<span className='menu__link' onClick={() => handleNavigation('/uber-uns', 'uber-uns')}>
 								über uns
-							</NavLink>
+							</span>
 						</li>
 						<li className='menu__li-desktop'>
-							<NavLink
-								className='menu__link'
-								to='/dienstleistungen'
-								state={{ scrollToId: 'dienstleistungen' }}
-								onClick={closeMenu}>
+							<span className='menu__link' onClick={() => handleNavigation('/dienstleistungen', 'dienstleistungen')}>
 								dienstleistungen
-							</NavLink>
+							</span>
 						</li>
 						<li className='menu__li-desktop'>
-							<NavLink className='menu__link' to='/projekte' onClick={closeMenu} state={{ scrollToId: 'projekte' }}>
+							<span className='menu__link' onClick={() => handleNavigation('/projekte', 'projekte')}>
 								projekte
-							</NavLink>
+							</span>
 						</li>
-
 						<li className='menu__li-desktop'>
-							<NavLink className='menu__link ' to='/kontakt' onClick={closeMenu} state={{ scrollToId: 'kontakt' }}>
+							<span className='menu__link' onClick={() => handleNavigation('/kontakt', 'kontakt')}>
 								kontakt
-							</NavLink>
+							</span>
 						</li>
 					</ul>
-
-					{/* <div className='menu-contact'>
-						<a className='menu__link menu__link--contact' href='tel:+41791332929'>
-							<span>
-								<FontAwesomeIcon icon={faPhoneVolume} />
-							</span>{' '}
-							<span className='menu__Link menu__link--phone'>+41 79 133 29 29</span>
-						</a>
-					</div> */}
 				</div>
 			</div>
 		</div>

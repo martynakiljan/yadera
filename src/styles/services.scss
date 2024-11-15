@@ -93,13 +93,12 @@
 }
 
 .service-detail__title {
-	border-top: 2px solid $color-red;
-	text-align: center;
+	text-align: left;
 	text-transform: uppercase;
-	font-weight: 500;
-	padding: 30px;
+	font-weight: 400;
+	padding: 30px 0;
 	font-size: 22px;
-	letter-spacing: 3px;
+	letter-spacing: 1px;
 
 	@include md-max {
 		padding-left: 0;
@@ -116,10 +115,20 @@
 	}
 }
 
+.service-detail__title--1 {
+	padding-top: 0;
+}
+
+.service-num {
+	color: $color-red;
+	font-size: 40px;
+	padding-right: 10px;
+}
+
 .sub-list__columns {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	gap: 50px;
 	padding-bottom: 30px;
 

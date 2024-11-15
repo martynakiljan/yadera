@@ -1,4 +1,3 @@
-
 .section {
 	@include content-width();
 
@@ -20,11 +19,10 @@
 		width: 25%;
 
 		.services &,
-		.services-details &,
 		.projects &,
 		.partners & {
 			width: 100%;
-			margin: 70px 0;
+			padding: 70px 0;
 		}
 	}
 }
