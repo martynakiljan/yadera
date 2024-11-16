@@ -1,21 +1,30 @@
 import BigImage from './BigImage'
 import Title from './Title'
 import img from '../assets/images/images/image4.jpeg'
-import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 
 const ServicesDetails = () => {
 	const location = useLocation()
 
 	useEffect(() => {
-		const scrollToId = location.state?.scrollToId || location.state?.serviceId
-		if (scrollToId) {
-			const element = document.getElementById(scrollToId)
+		if (location.state?.scrollToId) {
+			const element = document.getElementById(location.state.scrollToId)
+			if (element) {
+				window.scrollTo({
+					top: window.innerHeight * 0.7,
+					behavior: 'smooth',
+				})
+			}
+		} else if (location.state?.serviceId) {
+			const element = document.getElementById(location.state.serviceId)
+			console.log(element)
 			if (element) {
 				element.scrollIntoView({ behavior: 'smooth' })
 			}
 		}
-	}, [location])
+	}, [location.state])
+
 	return (
 		<>
 			<BigImage img={img} />

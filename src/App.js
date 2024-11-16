@@ -54,7 +54,6 @@ function App() {
 			) : (
 				<motion.div className='progress-bar' style={{ scaleX: scrollYProgress }} />
 			)}
-
 			<div className='app'>
 				<div className='sections'>
 					<Menu />
