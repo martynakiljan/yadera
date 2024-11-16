@@ -2,11 +2,11 @@
 	@include content-width();
 	margin: 0 auto;
 	overflow: hidden;
+	overflow-x: clip;
 }
 
 .project-wrapper {
 	position: relative;
-	overflow: hidden;
 	transition: transform 0.3s ease;
 	width: 100%;
 
@@ -81,7 +81,6 @@
 	flex-direction: column;
 	width: 100%;
 	margin: 40px 0;
-	overflow: hidden;
 	transition: transform 0.3s ease;
 
 	@include md-min {
@@ -101,7 +100,7 @@
 	text-transform: uppercase;
 	font-weight: 400;
 	font-size: 30px;
-	color: $color-white
+	color: $color-white;
 }
 
 .project__btn-more {
@@ -147,7 +146,7 @@
 	height: 102%;
 	display: none;
 	opacity: 0;
-	transition: opacity 0.5s ease-in-out; 
+	transition: opacity 0.5s ease-in-out;
 	z-index: 10;
 	border-right: 2px solid $color-red;
 	margin-top: -1px;

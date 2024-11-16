@@ -9,11 +9,6 @@
 
 html {
 	scroll-behavior: smooth;
-	scroll-padding-top: 70px;
-
-	@include md-max {
-		scroll-padding-top: 0;
-	}
 }
 
 body {
@@ -23,7 +18,7 @@ body {
 	font-style: normal;
 	font-size: 16px;
 	color: $color-main;
-	overflow-x: hidden;
+
 }
 
 html,
@@ -131,9 +126,6 @@ li {
 	content: '✓';
 }
 
-.sections {
-	overflow: hidden;
-}
 
 .sub-list__col {
 	@include md-max {
