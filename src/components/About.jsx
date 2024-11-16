@@ -32,7 +32,7 @@ const About = () => {
 								arbeiten zuverlässig, zügig und effizient. Die Qualität ist unsere Visitenkarte, das erachten wir als
 								Selbstverständlichkeit. Wir übernehmen Verantwortung in Bezug auf Termin, Qualität und Preis.
 							</span>
-							{location.pathname === '/uber-uns' && <Link text='Ich will mehr wissen' href='/contact ' />}
+							{location.pathname === '/uber-uns' && <Link text='Ich will mehr wissen' href='/kontakt ' />}
 						</p>
 					</div>
 				</div>
