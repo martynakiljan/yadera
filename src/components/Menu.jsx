@@ -17,7 +17,6 @@ function Menu() {
 		setIsOpen(false)
 	}
 
-	// Detect scroll for menu styling
 	useEffect(() => {
 		const handleScroll = () => {
 			setScrolled(window.scrollY > 50)
@@ -29,7 +28,7 @@ function Menu() {
 		}
 	}, [])
 
-	// Update `isMobile` state based on window width
+
 	useEffect(() => {
 		const handleResize = () => {
 			setIsMobile(window.innerWidth < 996)
@@ -42,17 +41,15 @@ function Menu() {
 	}, [])
 
 	const navigate = useNavigate()
-
 	const handleNavigation = (path, scrollToId) => {
 		if (isMobile) {
-			// Navigate to the page and ensure the scroll is reset after rendering
+		
 			navigate(path)
 			setTimeout(() => {
-				window.scrollTo(0, 0) // Ensure scroll starts at the top
-			}, 0) // Delayed to allow the page transition to complete
+				window.scrollTo(0, 0) 
+			}, 0) 
 			closeMenu()
 		} else {
-			// For desktop, navigate with scrollToId
 			navigate(path, { state: { scrollToId } })
 			closeMenu()
 		}

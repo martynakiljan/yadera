@@ -17,7 +17,7 @@ function Preloader({ setLoading }) {
 				className='preloader-background'
 				initial={{ height: '100vh', top: '0' }}
 				animate={{ height: '0vh', top: '100vh' }}
-				transition={{ duration: 1.5, ease: 'easeInOut' }} // smoother transition
+				transition={{ duration: 1.5, ease: 'easeInOut' }} 
 			/>
 			<motion.img
 				src={logo}
@@ -25,8 +25,8 @@ function Preloader({ setLoading }) {
 				className='logo'
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
-				exit={{ opacity: 0 }} // adds smooth fade out as loading ends
-				transition={{ duration: 1.2, ease: 'easeInOut' }} // smoother fade
+				exit={{ opacity: 0 }} 
+				transition={{ duration: 1.2, ease: 'easeInOut' }}
 			/>
 		</motion.div>
 	)

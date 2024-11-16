@@ -8,7 +8,7 @@ const Footer = () => {
 			<div className='footer__inner'>
 				<div className='footer__col'>
 					{' '}
-					<a className='footer-logo' href='/home' />
+					<NavLink className='footer-logo' href='/home' />
 				</div>
 				<div className='footer__col'>
 					<ul className='menu__list-footer'>
