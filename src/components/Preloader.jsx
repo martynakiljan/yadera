@@ -13,20 +13,28 @@ function Preloader({ setLoading }) {
 
 	return (
 		<motion.div className='preloader'>
+			{/* Preloader pojawia się natychmiast na pełnym ekranie */}
 			<motion.div
 				className='preloader-background'
-				initial={{ height: '100vh', top: '0' }}
-				animate={{ height: '0vh', top: '100vh' }}
-				transition={{ duration: 1.5, ease: 'easeInOut' }}
+				initial={{ opacity: 1 }}
+				animate={{ opacity: 1 }} // Preloader jest widoczny od razu
+				transition={{ duration: 0 }} // Brak opóźnienia animacji tła
 			/>
+			{/* Logo pojawia się natychmiast i powiększa się płynnie */}
 			<motion.img
 				src={logo}
 				alt='Logo'
 				className='logo'
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
+				initial={{ opacity: 1, scale: 1 }} // Logo od razu widoczne i normalnej wielkości
+				animate={{
+					opacity: 1, // Logo wciąż widoczne
+					scale: 1.2, // Logo powiększa się na moment
+				}}
 				exit={{ opacity: 0 }}
-				transition={{ duration: 1.2, ease: 'easeInOut' }}
+				transition={{
+					duration: 1.2, // Czas trwania animacji powiększenia
+					ease: 'easeOut', // Płynne zakończenie animacji
+				}}
 			/>
 		</motion.div>
 	)

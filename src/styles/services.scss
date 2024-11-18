@@ -8,10 +8,11 @@
 	flex-direction: column;
 	justify-content: center;
 	flex-wrap: nowrap;
-	gap: 10px;
+	gap: 20px;
 
 	@include md-min {
 		flex-direction: row;
+		gap: 10px;
 	}
 }
 
