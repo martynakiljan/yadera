@@ -16,13 +16,18 @@
 	align-items: flex-start;
 	padding: 20px 0;
 
-	label {
+	.checkbox-item {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
 		align-items: center;
-		margin-left: -2px;
+		margin-left: -4px;
 	}
+}
+
+input[type='radio'] {
+	margin: 0;
+	margin-right: 5px;
 }
 
 input[type='radio']:checked {

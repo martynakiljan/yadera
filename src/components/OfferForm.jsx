@@ -84,29 +84,23 @@ const OffertForm = () => {
 										{errors.phone && <p className='error-message'>{errors.phone.message}</p>}
 									</div>
 
-									<div className='form-group'>
-										<label htmlFor='services'>Wählen Sie die gewünschten Dienstleistungen</label>
-										<div className='checkbox-group'>
-											<label>
-												<input type='radio' value='Malerarbeiten' {...register('services')} />
-												Malerarbeiten
-											</label>
-											<label>
-												<input type='radio' value='Gipser' {...register('services')} />
-												Gipser
-											</label>
-											<label>
-												<input type='radio' value='Renovationen' {...register('services')} />
-												Renovationen
-											</label>
-											<label>
-												<input type='radio' value='Plattenlegger' {...register('services')} />
-												Plattenlegger
-											</label>
+									<div className='checkbox-group'>
+										<div className='checkbox-item'>
+											<input type='radio' value='Malerarbeiten' {...register('services')} id='malerarbeiten' />
+											<label htmlFor='malerarbeiten'>Malerarbeiten</label>
 										</div>
-										{errors.services && (
-											<p className='error-message'>Bitte wählen Sie mindestens eine Dienstleistung aus.</p>
-										)}
+										<div className='checkbox-item'>
+											<input type='radio' value='Gipser' {...register('services')} id='gipser' />
+											<label htmlFor='gipser'>Gipser</label>
+										</div>
+										<div className='checkbox-item'>
+											<input type='radio' value='Renovationen' {...register('services')} id='renovationen' />
+											<label htmlFor='renovationen'>Renovationen</label>
+										</div>
+										<div className='checkbox-item'>
+											<input type='radio' value='Plattenlegger' {...register('services')} id='plattenlegger' />
+											<label htmlFor='plattenlegger'>Plattenlegger</label>
+										</div>
 									</div>
 
 									<div className='form-group'>
