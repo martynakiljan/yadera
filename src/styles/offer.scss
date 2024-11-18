@@ -1,8 +1,12 @@
 .offer-title {
+	font-size: 16px;
 	@include content-width();
-	font-size: 22px;
 	font-weight: 400;
 	margin-top: 70px;
+
+	@include md-min {
+		font-size: 22px;
+	}
 }
 
 .checkbox-group {
@@ -10,11 +14,17 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
+	padding: 20px 0;
 
 	label {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
 		align-items: center;
+		margin-left: -2px;
 	}
+}
+
+input[type='radio']:checked {
+	accent-color: $color-red;
 }

@@ -5,7 +5,7 @@ const Welcome = () => {
 		<>
 			<h1 className='welcome-title welcome-text'>Willkommen bei Yadera GmbH </h1>
 			<h2 className='welcome-title welcome-subtitle'>Ihrem Partner für erstklassige Handwerksarbeit!</h2>
-			<div className='section section-story'>
+			<div className='section section-welcome'>
 				<div className='section-col section-col__left'>{<Title text='Erfahren Sie mehr' />}</div>
 				<div className='section-col section-col__right'>
 					<div className='story__text-wrapper'>
@@ -39,7 +39,7 @@ const Welcome = () => {
 								persönliche Beratung, höchste Handwerkskunst und termingerechte Ausführung. Vertrauen Sie auf unser
 								erfahrenes Team – wir machen Ihr Projekt zu unserer Priorität.
 							</p>
-							<p className='quote'>Yadera GmbH – Qualität, die bleibt.</p>
+							<p className='quote'>«Yadera GmbH – Qualität, die bleibt»</p>
 						</div>
 					</div>
 				</div>

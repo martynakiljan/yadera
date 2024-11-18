@@ -18,7 +18,8 @@ const Story = () => {
 						Mit Leidenschaft, Präzision und Termintreue setzen wir Ihre Projekte zuverlässig und effizient um. Vertrauen
 						Sie auf ein engagiertes Team, das Ihre Visionen partnerschaftlich und professionell verwirklicht.
 					</span>
-					<span className='quote'>Yadera GmbH – Qualität, auf die Sie bauen können.</span>
+
+					<span className='quote'>«Yadera GmbH – Qualität, auf die Sie bauen können»</span>
 				</div>
 				<Images />
 			</div>

@@ -88,19 +88,19 @@ const OffertForm = () => {
 										<label htmlFor='services'>Wählen Sie die gewünschten Dienstleistungen</label>
 										<div className='checkbox-group'>
 											<label>
-												<input type='checkbox' value='Malerarbeiten' {...register('services')} />
+												<input type='radio' value='Malerarbeiten' {...register('services')} />
 												Malerarbeiten
 											</label>
 											<label>
-												<input type='checkbox' value='Gipser' {...register('services')} />
+												<input type='radio' value='Gipser' {...register('services')} />
 												Gipser
 											</label>
 											<label>
-												<input type='checkbox' value='Renovationen' {...register('services')} />
+												<input type='radio' value='Renovationen' {...register('services')} />
 												Renovationen
 											</label>
 											<label>
-												<input type='checkbox' value='Plattenlegger' {...register('services')} />
+												<input type='radio' value='Plattenlegger' {...register('services')} />
 												Plattenlegger
 											</label>
 										</div>

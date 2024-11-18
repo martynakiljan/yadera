@@ -32,6 +32,10 @@
 	background-size: cover;
 	aspect-ratio: 1/1;
 	transition: transform 0.3s ease;
+
+	@include md-max {
+		aspect-ratio: 4/3;
+	}
 }
 
 .service__item-1 {
@@ -61,14 +65,14 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: black;
-	opacity: 0.4;
+	background-color: #353333;
+	opacity: 0.6;
 	transition: opacity 0.3s ease;
 	pointer-events: none;
 }
 
 .service__item:hover::before {
-	opacity: 0.6;
+	opacity: 0.4;
 }
 
 .service__title {
@@ -83,7 +87,7 @@
 	font-weight: 400;
 
 	@include md-min {
-		font-size: 14px;
+		font-size: 18px;
 	}
 }
 
@@ -107,14 +111,6 @@
 	}
 }
 
-.service-detail__list {
-	padding: 30px 0;
-
-	@include sm-max {
-		padding: 0;
-	}
-}
-
 .service-detail__title--1 {
 	padding-top: 0;
 }
@@ -123,6 +119,11 @@
 	color: $color-red;
 	font-size: 40px;
 	padding-right: 10px;
+
+	@include md-max {
+		font-size: 24px;
+		padding-right: 5px;
+	}
 }
 
 .sub-list__columns {

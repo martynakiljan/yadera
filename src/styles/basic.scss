@@ -90,6 +90,7 @@ input {
 }
 
 .list-item {
+	display: flex;
 	& + .list-item {
 		margin-top: 12px;
 	}
@@ -132,12 +133,12 @@ li {
 }
 
 .quote {
+	font-size: 16px;
 	padding: 20px 0;
 	font-weight: 450;
 	color: $color-red;
-	font-size: 22px;
-}
 
-#offerte {
-	scroll-margin-top: 100px; /* Zastępuje potrzebę przesunięcia w JS */
+	@include md-min {
+		font-size: 22px;
+	}
 }
