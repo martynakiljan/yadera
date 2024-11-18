@@ -1,0 +1,20 @@
+.offer-title {
+	@include content-width();
+	font-size: 22px;
+	font-weight: 400;
+	margin-top: 70px;
+}
+
+.checkbox-group {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	label {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+	}
+}

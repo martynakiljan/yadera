@@ -1,24 +1,26 @@
 .welcome {
 	text-align: center;
 	font-size: 22px;
-	@include content-width();
 	text-align: left;
 
 	@include md-max {
 		font-size: 16px;
 	}
-}
-
-.welcome-text {
-	margin-top: 20px;
 
 	@include md-min {
-		margin-top: 70px;
+		@include content-width();
 	}
+}
+
+.welcome-list {
+	padding: 20px 0;
 }
 
 .welcome-title {
 	font-weight: 400;
+	@include content-width();
+
+	margin: 0 auto;
 	margin-bottom: 10px;
 }
 

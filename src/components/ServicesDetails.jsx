@@ -18,7 +18,6 @@ const ServicesDetails = () => {
 			}
 		} else if (location.state?.serviceId) {
 			const element = document.getElementById(location.state.serviceId)
-			console.log(element)
 			if (element) {
 				element.scrollIntoView({ behavior: 'smooth' })
 			}
@@ -35,104 +34,77 @@ const ServicesDetails = () => {
 				<div className='section-col section-col__right'>
 					<div className='services-details__inner'>
 						<div className='service-detail service-detail__1' id='service1'>
-							<h2 className='service-detail__title service-detail__title--1'>
-								<span className='service-num'>1.</span>Fassadenarbeiten
+							<h2 className='service-detail__title'>
+								<span className='service-num'>1.</span> Malerarbeiten
 							</h2>
 							<div className='service-detail__list list'>
-								<div className='sub-list sub-list__columns'>
-									<ul className='sub-list__col'>
-										<p className='list-subtitle'> Montage Arbeiten im HF-Bereich:</p>
-										<li className='list-item'>Unterkonstruktionen Alu / Holz</li>
-										<li className='list-item'>Unterkonstruktionen Alu / Alu</li>
-										<li className='list-item'>Dämmung Mineral oder Steinwolle</li>
-										<li className='list-item'>Fensterbänke / Zargen Montage</li>
-										<li className='list-item'>Mauerkronenabdeckungen</li>
-										<li className='list-item'>Dachrandabdeckungen</li>
-									</ul>
-
-									<div className='sub-list__col'>
-										<p className='list-subtitle'> Montage verschiedenster Bekleidungen:</p>
-										<li className='list-item'>Eternit</li>
-										<li className='list-item'>Naturschiefer</li>
-										<li className='list-item'>Alucobond</li>
-										<li className='list-item'>Wellblech/gelochtes Wellblech</li>
-										<li className='list-item'>Flachblech</li>
-										<li className='list-item'>Fundermax-Platten Exterior</li>
-										<li className='list-item'>Künstlicher Rasenteppich</li>
-										<li className='list-item'>Trespa Meteon</li>
-										<li className='list-item'>Slimtech</li>
-										<li className='list-item'>Lisenen</li>
-										<li className='list-item'>Stahlblech</li>
-										<li className='list-item'>Montana Sandwich Panele</li>
-										<li className='list-item'>Putzträgerplatten</li>
-										<li className='list-item'>etc.</li>
-									</div>
-								</div>
+								<ul>
+									<li className='list-item'>Wand- und Deckenanstriche</li>
+									<li className='list-item'>Lackierarbeiten (Türen, Fenster, Geländer)</li>
+									<li className='list-item'>Kreative Wandgestaltung (z. B. Spachteltechniken, Tapeten)</li>
+									<li className='list-item'>Fassadenanstriche und -schutz</li>
+									<li className='list-item'>Korrosions- und Holzschutz</li>
+								</ul>
 							</div>
 						</div>
 
 						<div className='service-detail service-detail__2' id='service2'>
 							<h2 className='service-detail__title'>
-								{' '}
-								<span className='service-num'>2.</span>Malerarbeiten
+								<span className='service-num'>2.</span> Renovationen
 							</h2>
-
-							<div className='sub-list sub-list__columns'>
-								<div className='sub-list__col'>
-									<li className='list-item'>Innere & Äussere Malerarbeiten</li>
-									<li className='list-item'>Schimmel Sanierungen</li>
-									<li className='list-item'>Spritzarbeiten</li>
-								</div>
-
-								<div className='sub-list__col'>
-									<li className='list-item'>Tapezierarbeiten</li>
-									<li className='list-item'>Strassenmarkierungen</li>
-									<li className='list-item'>Dekorative Arbeiten</li>
-									<li className='list-item'>Fassadenreinigungen</li>
-								</div>
+							<div className='service-detail__list list'>
+								<ul>
+									<li className='list-item'>Sanierung und Modernisierung von Innenräumen</li>
+									<li className='list-item'>Trockenbau und Raumgestaltung</li>
+									<li className='list-item'>Komplettumbauten</li>
+									<li className='list-item'>Altbausanierung</li>
+									<li className='list-item'>Schimmel- und Feuchtigkeitsbekämpfung</li>
+								</ul>
 							</div>
-							<ul className='service-detail__list list'></ul>
 						</div>
 
 						<div className='service-detail service-detail__3' id='service3'>
 							<h2 className='service-detail__title'>
-								{' '}
-								<span className='service-num'>3.</span>Renovationen
+								<span className='service-num'>3.</span> Fassadenarbeiten
 							</h2>
-
-							<div className='sub-list sub-list__columns'>
-								<div className='sub-list__col'>
-									{' '}
-									<li className='list-item'>Innere & Äussere Malerarbeiten</li>
-									<li className='list-item'>Schimmel Sanierungen</li>
-									<li className='list-item'>Spritzarbeiten</li>
-									<li className='list-item'>Tapezierarbeiten</li>
-								</div>
-								<div className='sub-list__col'>
-									<li className='list-item'>Strassenmarkierungen</li>
-									<li className='list-item'>Dekorative Arbeiten</li>
-									<li className='list-item'>Fassadenreinigungen</li>
-								</div>
+							<div className='service-detail__list list'>
+								<ul>
+									<li className='list-item'>Verputzte Außenwärmedämmungen (WDVS)</li>
+									<li className='list-item'>Hinterlüftete Fassadensysteme</li>
+									<li className='list-item'>Risssanierung und Fassadenschutz</li>
+									<li className='list-item'>Reinigung und Instandhaltung von Fassaden</li>
+									<li className='list-item'>Fassadenbeschichtungen und Gestaltungen</li>
+								</ul>
 							</div>
 						</div>
 
 						<div className='service-detail service-detail__4' id='service4'>
 							<h2 className='service-detail__title'>
-								<span className='service-num'>4.</span> Plattenlegger
+								<span className='service-num'>4.</span> Gipserarbeiten
 							</h2>
-							<div className='sub-list sub-list__columns'>
-								<div className='sub-list__col'>
-									{' '}
-									<li className='list-item'>Innere & Äussere Malerarbeiten</li>
-									<li className='list-item'>Schimmel Sanierungen</li>
-									<li className='list-item'>Spritzarbeiten</li>
-									<li className='list-item'>Tapezierarbeiten</li>
-								</div>
-								<div className='sub-list__col'>
-									<li className='list-item'>Strassenmarkierungen</li>
-									<li className='list-item'>Dekorative Arbeiten</li>
-									<li className='list-item'>Fassadenreinigungen</li>
-								</div>
+							<div className='service-detail__list list'>
+								<ul>
+									<li className='list-item'>Glatt- und Strukturputze</li>
+									<li className='list-item'>Trockenbau und Deckenverkleidungen</li>
+									<li className='list-item'>Innen- und Außenputzarbeiten</li>
+									<li className='list-item'>Reparaturen und Ausbesserungen</li>
+									<li className='list-item'>Schall- und Brandschutzverkleidungen</li>
+								</ul>
+							</div>
+						</div>
+
+						<div className='service-detail service-detail__5' id='service5'>
+							<h2 className='service-detail__title'>
+								<span className='service-num'>5.</span> Plattenlegerarbeiten
+							</h2>
+							<div className='service-detail__list list'>
+								<ul>
+									<li className='list-item'>Verlegung von Fliesen, Platten und Mosaiken</li>
+									<li className='list-item'>Bad- und Küchenplattenarbeiten</li>
+									<li className='list-item'>Bodenbeläge in Wohn- und Außenbereichen</li>
+									<li className='list-item'>Abdichtungsarbeiten im Nassbereich</li>
+									<li className='list-item'>Reparaturen und Austausch von beschädigten Fliesen</li>
+								</ul>
 							</div>
 						</div>
 					</div>

@@ -4,7 +4,7 @@ import Link from './Link'
 import img from '../assets/images/images/image-about.jpeg'
 import BigImage from './BigImage'
 import Story from './Story'
-
+import Values from './Values'
 const About = () => {
 	const location = useLocation()
 
@@ -21,22 +21,21 @@ const About = () => {
 					<div className='section-col section-col__right'>
 						<p className='about__text-wrapper'>
 							<span className='about__text'>
-								Wir bieten Innere / Äussere Malerarbeiten, sowie auch Verputzte Aussenwärmedämmungen und Hinterlüftete
-								Fassadensysteme als Montagearbeiten an. Die partnerschaftliche Zusammenarbeit mit privaten
-								Bauherrschaften, Immobilien-Verwaltungen, Architekten, Total- und Generalunternehmungen funktioniert bis
-								heute tadellos.
+								Die Yadera GmbH bietet seit 2021 ein breites Spektrum an Handwerksdienstleistungen. Unser Fokus liegt
+								auf Malerarbeiten, Renovationen, Fassadenarbeiten, Plattenlegerarbeiten und Gipserarbeiten. Dank unserer
+								langjährigen Erfahrung setzen wir Projekte jeder Art zuverlässig und präzise um – ob im Privatbereich,
+								bei Umbauten oder Neubauten.
 							</span>
 							<span className='about__text'>
-								Unsere jahrelange Erfahrung im Privat, Umbau und Neubau gibt uns die Professionalität auch bei
-								schwierigen Baustellen ruhe zu bewahren und dem Kunden die bestmögliche Lösung zu Präsentieren. ​ Wir
-								arbeiten zuverlässig, zügig und effizient. Die Qualität ist unsere Visitenkarte, das erachten wir als
-								Selbstverständlichkeit. Wir übernehmen Verantwortung in Bezug auf Termin, Qualität und Preis.
+								Qualität, Verantwortung und Termintreue sind dabei unsere obersten Prinzipien. Vertrauen Sie auf ein
+								Team, das auch bei komplexen Baustellen stets die beste Lösung für Sie findet.
 							</span>
 							{location.pathname === '/uber-uns' && <Link text='Ich will mehr wissen' href='/kontakt ' />}
 						</p>
 					</div>
 				</div>
 			</div>
+			{location.pathname === '/uber-uns' && <Values />}
 		</div>
 	)
 }

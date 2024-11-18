@@ -12,6 +12,7 @@ import Projects from './components/Projects'
 import Home from './components/Home'
 import Preloader from './components/Preloader'
 import ContactWidget from './components/ContactWidget'
+import OffertForm from './components/OfferForm'
 function ScrollToPosition() {
 	const location = useLocation()
 
@@ -63,6 +64,7 @@ function App() {
 						<Route path='/dienstleistungen' element={<ServicesDetails />} />
 						<Route path='/projekte' element={<Projects />} />
 						<Route path='/kontakt' element={<Contact />} />
+						<Route path='/offerte' element={<OffertForm />} />
 						<Route path='/*' element={<Navigate to='/' />} />
 					</Routes>
 					<ContactWidget />

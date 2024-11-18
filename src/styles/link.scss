@@ -2,7 +2,7 @@
 	cursor: pointer;
 	display: inline-block;
 	position: relative;
-	margin-top: 30px;
+	margin-top: 20px;
 	text-decoration: none;
 	display: inline-flex;
 	justify-content: flex-start;
@@ -27,14 +27,13 @@
 	}
 
 	@include md-min {
-		margin-top: 40px;
+		margin-top: 20px;
 	}
 }
 
 .link-text {
 	position: relative;
 	font-weight: 500;
-	font-size: 13px;
 
 	@include md-min {
 		font-size: 22px;

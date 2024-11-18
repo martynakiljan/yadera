@@ -1,6 +1,7 @@
 .images {
 	position: relative;
 	display: none;
+	margin-top: 20px;
 
 	@include md-min {
 		display: block;

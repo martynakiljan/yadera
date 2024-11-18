@@ -1,7 +1,24 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { NavLink } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+
 const Header = () => {
+	const navigate = useNavigate()
+
+	const handleNavigation = () => {
+		navigate('/offerte')
+
+		setTimeout(() => {
+			const offerteSection = document.getElementById('offerte')
+			if (offerteSection) {
+				window.scrollTo({
+					top: window.innerHeight * 0.7,
+					behavior: 'smooth',
+				})
+			}
+		}, 0)
+	}
 	const ref = useRef(null)
 
 	const { scrollYProgress } = useScroll({
@@ -25,7 +42,7 @@ const Header = () => {
 					<motion.div className='header__title' style={{ opacity }}>
 						<div className='header__text-wrapper'>
 							<h1 className='header__text'>Das Fassaden und Maller Team.</h1>
-							<NavLink to='/kontakt' className='header__button'>
+							<NavLink to='/offerte' className='header__button' onClick={handleNavigation}>
 								Jetzt Angebot anfordern!
 							</NavLink>
 						</div>

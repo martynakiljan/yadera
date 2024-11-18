@@ -3,7 +3,7 @@ import Link from './Link'
 
 const CountUp = () => {
 	const [count, setCount] = useState(0)
-	const target = 48
+	const target = 500
 	const elementRef = useRef(null)
 	const hasAnimated = useRef(false)
 
