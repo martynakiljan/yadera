@@ -60,7 +60,7 @@ const CountUp = () => {
 						<div className='count-up__number'>+{count}</div>
 						<p className='count-up__text'>abgeschlossene Projekte</p>
 					</div>
-					<Link text='Sieh unsere Projekte an!' href='/projekte' />
+					<Link text='Möchten Sie unsere Projekte sehen?' href='/projekte' />
 				</p>
 			</div>
 		</div>

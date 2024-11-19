@@ -14,7 +14,7 @@ const Values = () => {
 						Erfahrung in den Bereichen Malerarbeiten, Renovationen, Fassadenarbeiten, Plattenlegerarbeiten und
 						Gipserarbeiten ermöglicht es uns, Ihre Wünsche und Anforderungen zuverlässig umzusetzen.
 					</span>
-					<span className='values_text about__text'>Warum Yadera GmbH?</span>
+					<span className='values_text about__text text-bold'>Warum Yadera GmbH?</span>
 					<ul className='values__list about__text'>
 						<li className='list-item'>
 							Qualität: Präzision und sorgfältige Ausführung sind für uns selbstverständlich.

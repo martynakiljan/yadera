@@ -2,7 +2,6 @@
 	cursor: pointer;
 	display: inline-block;
 	position: relative;
-
 	text-decoration: none;
 	display: inline-flex;
 	justify-content: flex-start;
@@ -26,14 +25,12 @@
 		background-color: $color-main;
 	}
 
-	@include md-min {
-		margin-top: 20px;
-	}
+
 }
 
 .link-text {
 	position: relative;
-	font-weight: 500;
+	font-weight: 450;
 
 	.count-up__section & {
 		font-size: 13px;
@@ -41,6 +38,10 @@
 		@include md-min {
 			font-size: 22px;
 		}
+	}
+
+	@include md-min {
+		font-size: 22px;
 	}
 }
 

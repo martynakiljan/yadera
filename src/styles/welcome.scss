@@ -14,17 +14,22 @@
 
 .welcome-list {
 	padding: 20px 0;
+
+	@include md-min {
+		padding: 30px 0;
+	}
 }
 
 .welcome-title {
 	font-weight: 400;
 	@include content-width();
-
 	margin: 0 auto;
-	margin-bottom: 10px;
+	font-size: 30px;
+
 
 	@include md-min {
-		font-size: 40px;
+		font-size: 60px;
+		margin-top: 70px;
 	}
 }
 
@@ -33,5 +38,6 @@
 
 	@include md-min {
 		font-size: 25px;
+		margin-top: 0;
 	}
 }

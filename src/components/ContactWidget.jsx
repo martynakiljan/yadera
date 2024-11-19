@@ -1,15 +1,13 @@
-import { FaWhatsapp } from 'react-icons/fa'
-import { NavLink } from 'react-router-dom'
-
+import { FaWhatsapp } from 'react-icons/fa';
 
 const ContactWidget = () => {
 	return (
 		<div className='contact-widget'>
-			<NavLink to='/kontakt'>
+			<a href='https://wa.me/41791332929' target='_blank' rel='noopener noreferrer'>
 				<FaWhatsapp />
-			</NavLink>
+			</a>
 		</div>
-	)
-}
+	);
+};
 
-export default ContactWidget
+export default ContactWidget;

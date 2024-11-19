@@ -83,23 +83,39 @@ const OffertForm = () => {
 										/>
 										{errors.phone && <p className='error-message'>{errors.phone.message}</p>}
 									</div>
-
-									<div className='checkbox-group'>
-										<div className='checkbox-item'>
-											<input type='radio' value='Malerarbeiten' {...register('services')} id='malerarbeiten' />
-											<label htmlFor='malerarbeiten'>Malerarbeiten</label>
-										</div>
-										<div className='checkbox-item'>
-											<input type='radio' value='Gipser' {...register('services')} id='gipser' />
-											<label htmlFor='gipser'>Gipser</label>
-										</div>
-										<div className='checkbox-item'>
-											<input type='radio' value='Renovationen' {...register('services')} id='renovationen' />
-											<label htmlFor='renovationen'>Renovationen</label>
-										</div>
-										<div className='checkbox-item'>
-											<input type='radio' value='Plattenlegger' {...register('services')} id='plattenlegger' />
-											<label htmlFor='plattenlegger'>Plattenlegger</label>
+									<div className='checkbox-container'>
+										<label>Wählen Sie die Dienstleistung aus, die Sie interessiert:</label>
+										<div className='checkbox-group'>
+											<div className='checkbox-item'>
+												<input type='radio' value='Malerarbeiten' {...register('services')} id='malerarbeiten' />
+												<label className='label-checkbox' htmlFor='malerarbeiten'>
+													Malerarbeiten
+												</label>
+											</div>
+											<div className='checkbox-item'>
+												<input type='radio' value='Gipser' {...register('services')} id='gipser' />
+												<label className='label-checkbox' tmlFor='gipser'>
+													Gipser
+												</label>
+											</div>
+											<div className='checkbox-item'>
+												<input type='radio' value='Renovationen' {...register('services')} id='renovationen' />
+												<label className='label-checkbox' htmlFor='renovationen'>
+													Renovationen
+												</label>
+											</div>
+											<div className='checkbox-item'>
+												<input type='radio' value='Plattenlegger' {...register('services')} id='plattenlegger' />
+												<label className='label-checkbox' htmlFor='plattenlegger'>
+													Plattenlegger
+												</label>
+											</div>
+											<div className='checkbox-item'>
+												<input type='radio' value='other' {...register('services')} id='other' />
+												<label className='label-checkbox' htmlFor='plattenlegger'>
+													Es steht nicht auf der Liste
+												</label>
+											</div>
 										</div>
 									</div>
 
