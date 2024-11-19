@@ -24,11 +24,13 @@
 .slider__item {
 	width: 200px;
 	flex-shrink: 0;
-	margin: 0 20px;
+	margin: 0 10px;
+	height: 300px;
 
 	@include md-min {
 		width: 295px;
 		height: 340px;
+		margin: 0 20px;
 	}
 }
 
