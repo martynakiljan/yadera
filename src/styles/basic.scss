@@ -84,8 +84,6 @@ video {
 	text-size-adjust: none;
 }
 
-
-
 li {
 	list-style-type: none;
 }
@@ -97,9 +95,6 @@ input {
 
 .list-item {
 	display: flex;
-	& + .list-item {
-		margin-top: 12px;
-	}
 }
 
 .list-subtitle {
@@ -137,7 +132,6 @@ li {
 		font-size: 13px;
 	}
 }
-
 
 .text-bold {
 	font-weight: 450;
