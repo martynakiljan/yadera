@@ -32,7 +32,7 @@
 
 .header__title {
 	position: absolute;
-	top: 60%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: $color-white;
@@ -45,6 +45,7 @@
 	@include md-min {
 		width: 70%;
 		margin: 0 auto;
+		top: 60%;
 	}
 }
 
