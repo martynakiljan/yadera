@@ -1,0 +1,10 @@
+.quote {
+	font-size: 16px;
+	padding: 20px 0;
+	font-weight: 450;
+	color: $color-red;
+
+	@include md-min {
+		font-size: 22px;
+	}
+}

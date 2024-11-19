@@ -112,9 +112,7 @@
 	}
 }
 
-.service-detail__title--1 {
-	padding-top: 0;
-}
+
 
 .service-num {
 	color: $color-red;
@@ -142,4 +140,12 @@
 .fade-out {
 	opacity: 0;
 	transition: opacity 0.5s ease-out;
+}
+
+
+.service-detail__1{
+
+	.service-detail__title {
+		padding-top: 0;
+	}
 }

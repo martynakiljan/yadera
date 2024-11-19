@@ -20,6 +20,10 @@ body {
 	color: $color-main;
 }
 
+.app {
+	overflow-x: clip;
+}
+
 html,
 body,
 div,
@@ -80,6 +84,8 @@ video {
 	text-size-adjust: none;
 }
 
+
+
 li {
 	list-style-type: none;
 }
@@ -132,16 +138,6 @@ li {
 	}
 }
 
-.quote {
-	font-size: 16px;
-	padding: 20px 0;
-	font-weight: 450;
-	color: $color-red;
-
-	@include md-min {
-		font-size: 22px;
-	}
-}
 
 .text-bold {
 	font-weight: 450;
