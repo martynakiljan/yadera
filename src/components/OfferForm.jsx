@@ -134,7 +134,7 @@ const OffertForm = () => {
 									{isSubmitting ? (
 										<ClipLoader color='#242527' size={24} />
 									) : (
-										<button type='submit' disabled={isSubmitting}>
+										<button class="offer-form__button" type='submit' disabled={isSubmitting}>
 												Jetzt Angebot anfordern!
 										</button>
 									)}

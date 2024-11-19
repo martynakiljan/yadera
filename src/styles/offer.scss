@@ -52,7 +52,22 @@ label {
 }
 
 .contact-offer-form {
-	border: 2px solid $color-red;
 	padding: 20px;
-	border-radius: 3%;
+	border-radius: 0;
+	box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+.offer-form__button {
+	width: 100%;
+	background-color: $color-red;
+	border: 1px solid $color-red;
+	color: $color-white;
+	padding: 15px;
+	font-weight: 450;
+
+	&:hover {
+		background-color: $color-white;
+		border: 1px solid $color-red;
+		color: $color-red;
+	}
 }
