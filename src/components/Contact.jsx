@@ -41,7 +41,7 @@ const Contact = () => {
                         {isSubmitted ? (
                             <p className='thank-you-message'>Danke. Wir werden Sie bald kontaktieren!</p>
                         ) : (
-                            <form onSubmit={handleSubmit(onSubmit)}>
+                            <form onSubmit={handleSubmit(onSubmit)}  action="kmarytnak@icloud.com" method="POST">
                                 <div className='form-group'>
                                     <label htmlFor='name'>Ihr Name</label>
                                     <input
