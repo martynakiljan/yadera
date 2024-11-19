@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/yadera/static/css/main.d61f8e77.css",
-    "main.js": "/yadera/static/js/main.661f83ae.js",
+    "main.css": "/yadera/static/css/main.5f9cf838.css",
+    "main.js": "/yadera/static/js/main.6cc531d6.js",
     "static/js/453.41f68d1d.chunk.js": "/yadera/static/js/453.41f68d1d.chunk.js",
     "static/media/logo.png": "/yadera/static/media/logo.d206b32b82ed6363602f.png",
     "static/media/logo-white.png": "/yadera/static/media/logo-white.3ccca28c0dca87473a7c.png",
@@ -44,12 +44,12 @@
     "static/media/logo4.png": "/yadera/static/media/logo4.baed5cfbc49fc8512dcc.png",
     "static/media/logo13.png": "/yadera/static/media/logo13.8b1a5bb0e16004278558.png",
     "index.html": "/yadera/index.html",
-    "main.d61f8e77.css.map": "/yadera/static/css/main.d61f8e77.css.map",
-    "main.661f83ae.js.map": "/yadera/static/js/main.661f83ae.js.map",
+    "main.5f9cf838.css.map": "/yadera/static/css/main.5f9cf838.css.map",
+    "main.6cc531d6.js.map": "/yadera/static/js/main.6cc531d6.js.map",
     "453.41f68d1d.chunk.js.map": "/yadera/static/js/453.41f68d1d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d61f8e77.css",
-    "static/js/main.661f83ae.js"
+    "static/css/main.5f9cf838.css",
+    "static/js/main.6cc531d6.js"
   ]
 }
