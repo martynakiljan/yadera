@@ -46,9 +46,7 @@ const OffertForm = () => {
 				<div className='section'>
 					<div className='section-col section-col__left'>
 						<Title text='Wünschen Sie eine Offerte?' fullwidth={true} />
-						<p></p>
 					</div>
-				
 					<div className='section-col section-col__right'>
 						<div className='contact-form contact-offer-form'>
 							{isSubmitted ? (
