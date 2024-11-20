@@ -7,4 +7,8 @@
 	@include md-min {
 		font-size: 22px;
 	}
+
+	&.full-width {
+		@include content-width();
+	}
 }

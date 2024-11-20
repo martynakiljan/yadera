@@ -42,4 +42,10 @@
 			}
 		}
 	}
+
+	&.full-width {
+		@include md-max {
+			width: 100%;
+		}
+	}
 }

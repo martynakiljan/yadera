@@ -34,16 +34,16 @@ const OffertForm = () => {
 		<div>
 			<>
 				<BigImage img={img} />
-				<h1 className='offer-title section' id='offerte'>
+				<p className='offer-text section' id='offerte'>
 					Möchten Sie mehr über unsere Dienstleistungen erfahren oder eine individuelle Offerte für Ihr Projekt
 					erhalten? Kontaktieren Sie uns einfach! Wir erstellen Ihnen gerne ein transparentes und unverbindliches
-					Angebot, das genau auf Ihre Wünsche und Anforderungen abgestimmt ist.
-				
-					<br></br>Bei Yadera GmbH legen wir grossen Wert auf klare Kommunikation, faire Preise und eine zuverlässige
-					Umsetzung.
-					<br></br>
-					Lassen Sie uns gemeinsam Ihre Ideen realisieren!
-				</h1>
+					Angebot, das genau auf Ihre Wünsche und Anforderungen abgestimmt ist. Bei Yadera GmbH legen wir grossen Wert
+					auf klare Kommunikation, faire Preise und eine zuverlässige Umsetzung.
+				</p>
+				<p className='offer-subtext'>
+					Bei Yadera GmbH legen wir grossen Wert auf klare Kommunikation, faire Preise und eine zuverlässige Umsetzung.
+				</p>
+				<p className='quote full-width'>Lassen Sie uns gemeinsam Ihre Ideen realisieren!</p>
 				<div className='section'>
 					<div className='section-col section-col__left'>
 						<Title text='Wünschen Sie eine Offerte?' />
@@ -134,8 +134,8 @@ const OffertForm = () => {
 									{isSubmitting ? (
 										<ClipLoader color='#242527' size={24} />
 									) : (
-										<button class="offer-form__button" type='submit' disabled={isSubmitting}>
-												Jetzt Angebot anfordern!
+										<button class='offer-form__button' type='submit' disabled={isSubmitting}>
+											Jetzt Angebot anfordern!
 										</button>
 									)}
 								</form>

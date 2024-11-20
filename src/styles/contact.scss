@@ -66,7 +66,7 @@
 	color: black;
 
 	@include md-min {
-		font-size: 18px;
+		font-size: 14px;
 	}
 	&::placeholder {
 		opacity: 0.7;
@@ -88,7 +88,7 @@
 	padding-top: 5px;
 }
 
-button {
+.form-button {
 	padding: 10px 20px;
 	color: $color-main;
 	background-color: transparent;
@@ -103,6 +103,17 @@ button {
 	color: $color-white;
 	padding: 15px;
 	font-weight: 450;
+
+	@include sm-min {
+		width: 30%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+	}
+	@include lg-min {
+		width: 100%;
+	}
 
 	@include md-max {
 		font-size: 10px;

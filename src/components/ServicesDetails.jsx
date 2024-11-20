@@ -29,7 +29,7 @@ const ServicesDetails = () => {
 			<BigImage img={img} />
 			<div className='section services-details' id='dienstleistungen'>
 				<div className='section-col section-col__left'>
-					<Title text='Womit beschäftigen wir uns?' />
+					<Title text='Womit beschäftigen wir uns?' fullwidth={true} />
 				</div>
 				<div className='section-col section-col__right'>
 					<div className='services-details__inner'>
