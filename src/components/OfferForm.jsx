@@ -46,7 +46,7 @@ const OffertForm = () => {
 				<p className='quote full-width'>Lassen Sie uns gemeinsam Ihre Ideen realisieren!</p>
 				<div className='section'>
 					<div className='section-col section-col__left'>
-						<Title text='Wünschen Sie eine Offerte?' />
+						<Title text='Wünschen Sie eine Offerte?'fullwidth={true}  />
 						<p></p>
 					</div>
 					<div className='section-col section-col__right'>
