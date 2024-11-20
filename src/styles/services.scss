@@ -20,6 +20,8 @@
 	cursor: pointer;
 	width: 100%;
 	overflow: hidden;
+	border: none;
+	padding: 0;
 
 	@include md-min {
 		width: calc(50% - 10px);
@@ -144,4 +146,8 @@
 	.service-detail__title {
 		padding-top: 0;
 	}
+}
+
+.service-detail {
+	scroll-margin-top: 10vh;
 }

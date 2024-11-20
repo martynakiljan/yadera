@@ -45,9 +45,10 @@ const OffertForm = () => {
 				<p className='quote full-width'>Lassen Sie uns gemeinsam Ihre Ideen realisieren!</p>
 				<div className='section'>
 					<div className='section-col section-col__left'>
-						<Title text='Wünschen Sie eine Offerte?'fullwidth={true}  />
+						<Title text='Wünschen Sie eine Offerte?' fullwidth={true} />
 						<p></p>
 					</div>
+				
 					<div className='section-col section-col__right'>
 						<div className='contact-form contact-offer-form'>
 							{isSubmitted ? (
@@ -133,7 +134,7 @@ const OffertForm = () => {
 									{isSubmitting ? (
 										<ClipLoader color='#242527' size={24} />
 									) : (
-										<button class='offer-form__button' type='submit' disabled={isSubmitting}>
+										<button className='offer-form__button' type='submit' disabled={isSubmitting}>
 											Jetzt Angebot anfordern!
 										</button>
 									)}

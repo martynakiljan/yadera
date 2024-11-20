@@ -55,13 +55,13 @@ const CountUp = () => {
 		<div className='section count-up__section'>
 			<div className='section-col section-col__left'></div>
 			<div className='section-col section-col__right'>
-				<p className='about__text-wrapper'>
+				<div className='about__text-wrapper'>
 					<div className='count-up' ref={elementRef}>
 						<div className='count-up__number'>+{count}</div>
 						<p className='count-up__text'>abgeschlossene Projekte</p>
 					</div>
 					<Link text='Möchten Sie unsere Projekte sehen?' href='/projekte' />
-				</p>
+				</div>
 			</div>
 		</div>
 	)

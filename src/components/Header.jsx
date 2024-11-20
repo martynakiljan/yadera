@@ -32,7 +32,7 @@ const Header = () => {
 
 	return (
 		<div className='header'>
-			<div className='header__inner' ref={ref}>
+			<div className='header__inner' ref={ref} id='home'>
 				<motion.div
 					style={{
 						scale,

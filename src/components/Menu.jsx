@@ -28,7 +28,6 @@ function Menu() {
 		}
 	}, [])
 
-
 	useEffect(() => {
 		const handleResize = () => {
 			setIsMobile(window.innerWidth < 996)
@@ -43,11 +42,10 @@ function Menu() {
 	const navigate = useNavigate()
 	const handleNavigation = (path, scrollToId) => {
 		if (isMobile) {
-		
 			navigate(path)
 			setTimeout(() => {
-				window.scrollTo(0, 0) 
-			}, 0) 
+				window.scrollTo(0, 0)
+			}, 0)
 			closeMenu()
 		} else {
 			navigate(path, { state: { scrollToId } })
@@ -107,10 +105,10 @@ function Menu() {
 				</div>
 
 				<div className='menu__desktop'>
-					<NavLink className='menu__logo-wrapper' to='/'>
-						<div className='menu__logo'></div>
-					</NavLink>
 					<ul className='menu__list-desktop'>
+						<NavLink className='menu__logo-wrapper menu__logo-wrapper-desktop' to='/'>
+							<div className='menu__logo'></div>
+						</NavLink>
 						<li className='menu__li-desktop'>
 							<NavLink className='menu__link' to='/' onClick={closeMenu}>
 								home

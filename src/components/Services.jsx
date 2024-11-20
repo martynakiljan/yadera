@@ -20,32 +20,32 @@ const Services = () => {
 				<Title text='Womit beschäftigen wir uns?'  fullwidth={true}/>
 			</div>
 			<div className='service__inner'>
-				<div className='service__item--wrapper' onClick={() => handleServiceClick('service1')}>
+				<button className='service__item--wrapper' onClick={() => handleServiceClick('service1')}>
 					<div className='service__item service__item-2'>
 						<h2 className='service__title'>Malerarbeiten</h2>
 					</div>
-				</div>
-				<div className='service__item--wrapper' onClick={() => handleServiceClick('service2')}>
+				</button>
+				<button className='service__item--wrapper' onClick={() => handleServiceClick('service2')}>
 					<div className='service__item service__item-3'>
 						<h2 className='service__title'>Renovationen</h2>
 					</div>
-				</div>
-				<div className='service__item--wrapper' onClick={() => handleServiceClick('service3')}>
+				</button>
+				<button className='service__item--wrapper' onClick={() => handleServiceClick('service3')}>
 					<div className='service__item service__item-3'>
 						<h2 className='service__title'>Gipser</h2>
 					</div>
-				</div>
-				<div className='service__item--wrapper' onClick={() => handleServiceClick('service4')}>
+				</button>
+				<button className='service__item--wrapper' onClick={() => handleServiceClick('service4')}>
 					<div className='service__item service__item-1'>
 						<h2 className='service__title'>Fassadenarbeiten</h2>
 					</div>
-				</div>
+				</button>
 
-				<div className='service__item--wrapper' onClick={() => handleServiceClick('service5')}>
+				<button className='service__item--wrapper' onClick={() => handleServiceClick('service5')}>
 					<div className='service__item service__item-4'>
 						<h2 className='service__title'>Plattenlegger</h2>
 					</div>
-				</div>
+				</button>
 			</div>
 		</div>
 	)
