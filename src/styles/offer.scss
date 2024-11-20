@@ -86,6 +86,7 @@ label {
 	color: $color-white;
 	padding: 15px;
 	font-weight: 450;
+	text-transform: uppercase;
 
 	@include sm-min {
 		width: 30%;

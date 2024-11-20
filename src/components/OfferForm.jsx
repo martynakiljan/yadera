@@ -1,5 +1,4 @@
 import BigImage from './BigImage'
-import { useEffect } from 'react'
 import img from '../assets/images/images/image-9.jpg'
 import Title from './Title'
 import { useState } from 'react'
