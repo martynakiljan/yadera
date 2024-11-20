@@ -1,6 +1,6 @@
-const Title = ({ text }) => {
+const Title = ({ text, fullwidth }) => {
 	return (
-		<h1 className='title'>
+		<h1 className={`title ${fullwidth ? 'full-width' : ''}`}>
 			{' '}
 			<span className='slash'>/</span> {text}
 		</h1>

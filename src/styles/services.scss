@@ -20,6 +20,8 @@
 	cursor: pointer;
 	width: 100%;
 	overflow: hidden;
+	border: none;
+	padding: 0;
 
 	@include md-min {
 		width: calc(50% - 10px);
@@ -146,24 +148,6 @@
 	}
 }
 
-.service-detail__list ul {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	gap: 1rem;
-	padding: 0;
-	margin: 0;
-	align-items: flex-start;
-	list-style: none;
-}
-
-.service-detail__list ul li {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-
-	@include md-min {
-		width: 40%;
-	}
+.service-detail {
+	scroll-margin-top: 10vh;
 }

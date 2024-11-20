@@ -95,6 +95,7 @@ const OffertForm = () => {
 											</div>
 											<div className='checkbox-item'>
 												<input type='radio' value='Gipser' {...register('services')} id='gipser' />
+											
 												<label className='label-checkbox' htmlFor='gipser'>
 													Gipser
 												</label>

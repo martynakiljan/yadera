@@ -25,7 +25,7 @@
 	@include content-width();
 	margin: 0 auto;
 	font-size: 30px;
-
+	margin-bottom: 3px;
 
 	@include md-min {
 		font-size: 60px;

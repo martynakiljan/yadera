@@ -17,7 +17,7 @@ const Services = () => {
 	return (
 		<div className={`services ${fadeOut ? 'fade-out' : ''}`}>
 			<div className='section-col section-col__left' id='diensteilungen'>
-				<Title text='Womit beschäftigen wir uns?' />
+				<Title text='Womit beschäftigen wir uns?'  fullwidth={true}/>
 			</div>
 			<div className='service__inner'>
 				<button className='service__item--wrapper' onClick={() => handleServiceClick('service1')}>

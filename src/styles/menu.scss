@@ -10,7 +10,6 @@
 
 	&.scrolled {
 		background-color: $color-white;
-
 		border-color: rgba(0, 0, 0, 0.1);
 
 		.menu__link {
@@ -46,6 +45,10 @@
 .menu__logo {
 	width: 130px;
 	height: 50px;
+
+	@include md-max {
+		margin-left: -2px;
+	}
 }
 
 .menu__list {
@@ -102,10 +105,6 @@
 		text-transform: uppercase;
 	}
 
-	&:hover {
-		color: $color-white;
-	}
-
 	&::after {
 		content: '';
 		position: absolute;
@@ -115,6 +114,10 @@
 		height: 1px;
 		background-color: $color-white;
 		transition: width 0.3s ease;
+
+		.scrolled & {
+			background-color: $color-main;
+		}
 	}
 
 	&:hover::after {

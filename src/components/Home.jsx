@@ -9,7 +9,7 @@ import CountUp from './CountUp'
 
 const Home = () => {
 	return (
-		<div id='home'>
+		<div >
 			<Header />
 			<Welcome />
 			<Services />

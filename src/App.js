@@ -13,7 +13,12 @@ import Home from './components/Home'
 import Preloader from './components/Preloader'
 import ContactWidget from './components/ContactWidget'
 import OffertForm from './components/OffertForm'
-function ScrollToPosition() {
+
+
+function AppContent() {
+	const { scrollYProgress } = useScroll()
+	const [isVisible, setIsVisible] = useState(false)
+
 	const location = useLocation()
 
 	useEffect(() => {
@@ -24,14 +29,6 @@ function ScrollToPosition() {
 			behavior: 'smooth',
 		})
 	}, [location])
-
-	return null
-}
-
-function App() {
-	const { scrollYProgress } = useScroll()
-	const [isVisible, setIsVisible] = useState(false)
-	const [loading, setLoading] = useState(true)
 
 	const handleScroll = () => {
 		const currentScroll = window.scrollY
@@ -47,14 +44,8 @@ function App() {
 	}, [])
 
 	return (
-		<Router>
-			<ScrollToPosition />
-
-			{loading ? (
-				<Preloader setLoading={setLoading} />
-			) : (
-				<motion.div className='progress-bar' style={{ scaleX: scrollYProgress }} />
-			)}
+		<>
+			<motion.div className='progress-bar' style={{ scaleX: scrollYProgress }} />
 			<div className='app'>
 				<div className='sections'>
 					<Menu />
@@ -71,8 +62,14 @@ function App() {
 				</div>
 				<Footer />
 			</div>
-		</Router>
+		</>
 	)
+}
+
+function App() {
+	const [loading, setLoading] = useState(true)
+
+	return <Router>{loading ? <Preloader setLoading={setLoading} /> : <AppContent />}</Router>
 }
 
 export default App

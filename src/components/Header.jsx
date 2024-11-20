@@ -8,16 +8,7 @@ const Header = () => {
 
 	const handleNavigation = () => {
 		navigate('/offerte')
-
-		setTimeout(() => {
-			const offerteSection = document.getElementById('offerte')
-			if (offerteSection) {
-				window.scrollTo({
-					top: window.innerHeight * 0.7,
-					behavior: 'smooth',
-				})
-			}
-		}, 0)
+		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}
 	const ref = useRef(null)
 
@@ -32,7 +23,7 @@ const Header = () => {
 
 	return (
 		<div className='header'>
-			<div className='header__inner' ref={ref}>
+			<div className='header__inner' ref={ref} id='home'>
 				<motion.div
 					style={{
 						scale,
