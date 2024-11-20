@@ -1,5 +1,4 @@
 import BigImage from './BigImage'
-import { useEffect } from 'react'
 import img from '../assets/images/images/image-9.jpg'
 import Title from './Title'
 import { useState } from 'react'
@@ -38,7 +37,6 @@ const OffertForm = () => {
 					Möchten Sie mehr über unsere Dienstleistungen erfahren oder eine individuelle Offerte für Ihr Projekt
 					erhalten? Kontaktieren Sie uns einfach! Wir erstellen Ihnen gerne ein transparentes und unverbindliches
 					Angebot, das genau auf Ihre Wünsche und Anforderungen abgestimmt ist.
-				
 					<br></br>Bei Yadera GmbH legen wir grossen Wert auf klare Kommunikation, faire Preise und eine zuverlässige
 					Umsetzung.
 					<br></br>
@@ -97,7 +95,7 @@ const OffertForm = () => {
 											</div>
 											<div className='checkbox-item'>
 												<input type='radio' value='Gipser' {...register('services')} id='gipser' />
-												<label className='label-checkbox' tmlFor='gipser'>
+												<label className='label-checkbox' htmlFor='gipser'>
 													Gipser
 												</label>
 											</div>
@@ -134,8 +132,8 @@ const OffertForm = () => {
 									{isSubmitting ? (
 										<ClipLoader color='#242527' size={24} />
 									) : (
-										<button class="offer-form__button" type='submit' disabled={isSubmitting}>
-												Jetzt Angebot anfordern!
+										<button className='offer-form__button' type='submit' disabled={isSubmitting}>
+											Jetzt Angebot anfordern!
 										</button>
 									)}
 								</form>

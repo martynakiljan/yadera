@@ -145,3 +145,25 @@
 		padding-top: 0;
 	}
 }
+
+.service-detail__list ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 1rem;
+	padding: 0;
+	margin: 0;
+	align-items: flex-start;
+	list-style: none;
+}
+
+.service-detail__list ul li {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	@include md-min {
+		width: 40%;
+	}
+}

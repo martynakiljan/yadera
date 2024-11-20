@@ -12,7 +12,7 @@ import Projects from './components/Projects'
 import Home from './components/Home'
 import Preloader from './components/Preloader'
 import ContactWidget from './components/ContactWidget'
-import OffertForm from './components/OfferForm'
+import OffertForm from './components/OffertForm'
 function ScrollToPosition() {
 	const location = useLocation()
 
