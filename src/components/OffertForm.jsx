@@ -9,7 +9,7 @@ const OffertForm = () => {
 	useEffect(() => {
 		const scrollPosition = window.innerWidth < 992 ? 0 : window.innerHeight * 0.7
 		window.scrollTo({ top: scrollPosition, behavior: 'smooth' })
-	}, []) // Pusty array oznacza, że kod uruchomi się tylko raz po załadowaniu komponentu
+	}, [])
 
 	const {
 		register,
@@ -51,7 +51,7 @@ const OffertForm = () => {
 
 				<div className='section'>
 					<div className='section-col section-col__left'>
-						<Title text='Wünschen Sie eine Offerte?' />
+						<Title text='Wünschen Sie eine Offerte?' fullwidth={true} />
 						<p></p>
 					</div>
 					<div className='section-col section-col__right'>
