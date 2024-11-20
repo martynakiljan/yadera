@@ -4,12 +4,6 @@ import { NavLink } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
-	const navigate = useNavigate()
-
-	const handleNavigation = () => {
-		navigate('/offerte')
-		window.scrollTo({ top: 0, behavior: 'smooth' })
-	}
 	const ref = useRef(null)
 
 	const { scrollYProgress } = useScroll({
@@ -33,7 +27,7 @@ const Header = () => {
 					<motion.div className='header__title' style={{ opacity }}>
 						<div className='header__text-wrapper'>
 							<h1 className='header__text'>Das Fassaden und Maller Team.</h1>
-							<NavLink to='/offerte' className='header__button' onClick={handleNavigation}>
+							<NavLink to='/offerte' className='header__button'>
 								Jetzt Angebot anfordern!
 							</NavLink>
 						</div>

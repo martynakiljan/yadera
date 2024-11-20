@@ -66,24 +66,24 @@ function Menu() {
 					{isOpen && (
 						<ul className={`menu__list ${isOpen ? 'open' : ''}`}>
 							<li className='menu__li'>
-								<span className='menu__link' onClick={() => handleNavigation('/', null)}>
+								<a className='menu__link' onClick={() => handleNavigation('/', null)}>
 									home
-								</span>
+								</a>
 							</li>
 							<li className='menu__li'>
-								<span className='menu__link' onClick={() => handleNavigation('/uber-uns', 'uber-uns')}>
+								<a className='menu__link' onClick={() => handleNavigation('/uber-uns', 'uber-uns')}>
 									über uns
-								</span>
+								</a>
 							</li>
 							<li className='menu__li'>
-								<span className='menu__link' onClick={() => handleNavigation('/dienstleistungen', 'dienstleistungen')}>
+								<a className='menu__link' onClick={() => handleNavigation('/dienstleistungen', 'dienstleistungen')}>
 									dienstleistungen
-								</span>
+								</a>
 							</li>
 							<li className='menu__li'>
-								<span className='menu__link' onClick={() => handleNavigation('/projekte', 'projekte')}>
+								<a className='menu__link' onClick={() => handleNavigation('/projekte', 'projekte')}>
 									projekte
-								</span>
+								</a>
 							</li>
 							<li className='menu__li'>
 								<span

@@ -1,11 +1,16 @@
 import BigImage from './BigImage'
 import img from '../assets/images/images/image-9.jpg'
 import Title from './Title'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import ClipLoader from 'react-spinners/ClipLoader'
 
 const OffertForm = () => {
+	useEffect(() => {
+		const scrollPosition = window.innerWidth < 992 ? 0 : window.innerHeight * 0.7
+		window.scrollTo({ top: scrollPosition, behavior: 'smooth' })
+	}, []) // Pusty array oznacza, że kod uruchomi się tylko raz po załadowaniu komponentu
+
 	const {
 		register,
 		handleSubmit,
@@ -33,15 +38,17 @@ const OffertForm = () => {
 		<div>
 			<>
 				<BigImage img={img} />
-				<h1 className='offer-title section' id='offerte'>
+				<p className='offer-text section' id='offerte'>
 					Möchten Sie mehr über unsere Dienstleistungen erfahren oder eine individuelle Offerte für Ihr Projekt
 					erhalten? Kontaktieren Sie uns einfach! Wir erstellen Ihnen gerne ein transparentes und unverbindliches
-					Angebot, das genau auf Ihre Wünsche und Anforderungen abgestimmt ist.
-					<br></br>Bei Yadera GmbH legen wir grossen Wert auf klare Kommunikation, faire Preise und eine zuverlässige
-					Umsetzung.
-					<br></br>
-					Lassen Sie uns gemeinsam Ihre Ideen realisieren!
-				</h1>
+					Angebot, das genau auf Ihre Wünsche und Anforderungen abgestimmt ist. Bei Yadera GmbH legen wir grossen Wert
+					auf klare Kommunikation, faire Preise und eine zuverlässige Umsetzung.
+				</p>
+				<p className='offer-subtext'>
+					Bei Yadera GmbH legen wir grossen Wert auf klare Kommunikation, faire Preise und eine zuverlässige Umsetzung.
+				</p>
+				<p className='quote full-width'>Lassen Sie uns gemeinsam Ihre Ideen realisieren!</p>
+
 				<div className='section'>
 					<div className='section-col section-col__left'>
 						<Title text='Wünschen Sie eine Offerte?' />
@@ -95,7 +102,7 @@ const OffertForm = () => {
 											</div>
 											<div className='checkbox-item'>
 												<input type='radio' value='Gipser' {...register('services')} id='gipser' />
-											
+
 												<label className='label-checkbox' htmlFor='gipser'>
 													Gipser
 												</label>
