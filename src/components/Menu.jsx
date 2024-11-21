@@ -43,30 +43,56 @@ function Menu() {
 	const location = useLocation()
 
 
+	const getPageMaxScroll = () => {
+		return Math.max(
+			document.body.scrollHeight,
+			document.body.offsetHeight,
+			document.documentElement.clientHeight,
+			document.documentElement.scrollHeight,
+			document.documentElement.offsetHeight
+		) - window.innerHeight; // Odejmujemy wysokość widoku
+	};
+	
+	const scrollToTop = () => {
+		const maxScroll = getPageMaxScroll();
+		let top = -1; // Docelowa pozycja przewijania
+	
+		if (top > maxScroll) {
+			top = maxScroll; // Ograniczamy wartość do maksymalnej
+		}
+	
+		window.scroll({
+			top: top,
+			left: 0,
+			behavior: "smooth", // Włączamy płynne przewijanie
+		});
+	};
+	
 	const handleNavigation = (path, scrollToId) => {
 		const isHomePage = path === '/';
 	
 		if (isMobile) {
 			navigate(path);
-		    window.scroll({ top: -1, left: 0, behavior: "smooth" });
+			setTimeout(() => {
+				scrollToTop();
+			}, 0);
 			closeMenu();
-			
+			return;
 		}
-
+	
 		if (isHomePage) {
 			navigate(path);
 			setTimeout(() => {
-				window.scrollTo(0, 0);
+				scrollToTop();
 			}, 0);
 			closeMenu();
 		} else if (scrollToId) {
-			navigate(path, { state: { scrollToId } })
-			closeMenu()
+			navigate(path, { state: { scrollToId } });
+			closeMenu();
 		} else {
-
 			navigate(path);
 			setTimeout(() => {
-				window.scrollTo(0, 0);
+				scrollToTop();
 			}, 0);
 			closeMenu();
 		}
