@@ -18,7 +18,7 @@ const Footer = () => {
 							</NavLink>
 						</li>
 						<li className='menu__li'>
-							<NavLink className='menu__link menu__link--footer' to='/uber-uns' state={{ scrollToId: 'about' }}>
+							<NavLink className='menu__link menu__link--footer' to='/uber-uns' state={{ scrollToId: 'uber-uns' }}>
 								über uns
 							</NavLink>
 						</li>
@@ -26,12 +26,12 @@ const Footer = () => {
 							<NavLink
 								className='menu__link menu__link--footer'
 								to='/dienstleistungen'
-								state={{ scrollToId: 'services' }}>
+								state={{ scrollToId: 'dienstleistungen'}}>
 								dienstleistungen
 							</NavLink>
 						</li>
 						<li className='menu__li'>
-							<NavLink className='menu__link menu__link--footer' to='/projekte' state={{ scrollToId: 'projects' }}>
+							<NavLink className='menu__link menu__link--footer' to='/projekte' state={{ scrollToId: 'projekte' }}>
 								projekte
 							</NavLink>
 						</li>
