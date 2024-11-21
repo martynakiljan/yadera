@@ -12,7 +12,7 @@ const ServicesDetails = () => {
 			const element = document.getElementById(location.state.scrollToId)
 			if (element) {
 				window.scrollTo({
-					top: window.innerHeight * 0.7,
+					top: window.innerHeight,
 					behavior: 'smooth',
 				})
 			}
@@ -65,7 +65,22 @@ const ServicesDetails = () => {
 
 						<div className='service-detail service-detail__3' id='service3'>
 							<h2 className='service-detail__title'>
-								<span className='service-num'>3.</span> Fassadenarbeiten
+								<span className='service-num'>3.</span> Gipserarbeiten
+							</h2>
+							<div className='service-detail__list list'>
+								<ul>
+									<li className='list-item'>Glatt- und Strukturputze</li>
+									<li className='list-item'>Trockenbau und Deckenverkleidungen</li>
+									<li className='list-item'>Innen- und Außenputzarbeiten</li>
+									<li className='list-item'>Reparaturen und Ausbesserungen</li>
+									<li className='list-item'>Schall- und Brandschutzverkleidungen</li>
+								</ul>
+							</div>
+						</div>
+
+						<div className='service-detail service-detail__4' id='service4'>
+							<h2 className='service-detail__title'>
+								<span className='service-num'>4.</span> Fassadenarbeiten
 							</h2>
 							<div className='service-detail__list list'>
 								<ul>
@@ -78,20 +93,7 @@ const ServicesDetails = () => {
 							</div>
 						</div>
 
-						<div className='service-detail service-detail__4' id='service4'>
-							<h2 className='service-detail__title'>
-								<span className='service-num'>4.</span> Gipserarbeiten
-							</h2>
-							<div className='service-detail__list list'>
-								<ul>
-									<li className='list-item'>Glatt- und Strukturputze</li>
-									<li className='list-item'>Trockenbau und Deckenverkleidungen</li>
-									<li className='list-item'>Innen- und Außenputzarbeiten</li>
-									<li className='list-item'>Reparaturen und Ausbesserungen</li>
-									<li className='list-item'>Schall- und Brandschutzverkleidungen</li>
-								</ul>
-							</div>
-						</div>
+				
 
 						<div className='service-detail service-detail__5' id='service5'>
 							<h2 className='service-detail__title'>
