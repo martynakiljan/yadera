@@ -46,8 +46,17 @@ function Menu() {
 			setTimeout(() => {
 				window.scrollTo(0, 0)
 			}, 0)
+
+		
+
 			closeMenu()
 			document.body.style.transform = 'translateZ(0)'; 
+
+			window.history.scrollRestoration = 'manual';
+			return () => {
+				window.history.scrollRestoration = 'auto'; 
+			};
+
 		} else {
 			navigate(path, { state: { scrollToId } })
 			closeMenu()
