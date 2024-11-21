@@ -71,30 +71,24 @@ function Menu() {
 
 	const handleNavigation = (path, scrollToId) => {
 		const isHomePage = path === '/'
-
 		if (isMobile) {
 			navigate(path)
-			console.log(path)
 			setTimeout(() => {
 				scrollToTop()
 			}, 0)
 			closeMenu()
 			return
 		}
-
 		if (isHomePage) {
 			navigate(path)
-			console.log(path)
 			setTimeout(() => {
 				scrollToTop()
 			}, 0)
 			closeMenu()
 		} else if (scrollToId) {
-			console.log(path, scrollToId)
 			navigate(path, { state: { scrollToId } })
 			closeMenu()
 		} else {
-			console.log(path, 'koniec')
 			navigate(path)
 			setTimeout(() => {
 				scrollToTop()
