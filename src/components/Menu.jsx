@@ -55,16 +55,16 @@ function Menu() {
 	
 	const scrollToTop = () => {
 		const maxScroll = getPageMaxScroll();
-		let top = -1; // Docelowa pozycja przewijania
+		let top = -1; 
 	
 		if (top > maxScroll) {
-			top = maxScroll; // Ograniczamy wartość do maksymalnej
+			top = maxScroll; 
 		}
 	
 		window.scroll({
 			top: top,
 			left: 0,
-			behavior: "smooth", // Włączamy płynne przewijanie
+			behavior: "smooth", 
 		});
 	};
 	

@@ -14,12 +14,20 @@ import Preloader from './components/Preloader'
 import ContactWidget from './components/ContactWidget'
 import OffertForm from './components/OffertForm'
 
-
 function AppContent() {
 	const { scrollYProgress } = useScroll()
 	const [isVisible, setIsVisible] = useState(false)
-	const [isMobile, setIsMobile] = useState(window.innerWidth < 996)
 
+	const location = useLocation()
+
+	useEffect(() => {
+		const isHomePage = location.pathname === '/'
+
+		window.scrollTo({
+			top: isHomePage ? 0 : null,
+			behavior: 'smooth',
+		})
+	}, [location])
 
 	const handleScroll = () => {
 		const currentScroll = window.scrollY
