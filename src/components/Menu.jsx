@@ -50,7 +50,7 @@ function Menu() {
 			document.documentElement.clientHeight,
 			document.documentElement.scrollHeight,
 			document.documentElement.offsetHeight
-		) - window.innerHeight; // Odejmujemy wysokość widoku
+		) - window.innerHeight; 
 	};
 	
 	const scrollToTop = () => {

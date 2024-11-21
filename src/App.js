@@ -21,13 +21,15 @@ function AppContent() {
 	const location = useLocation()
 
 	useEffect(() => {
-		const isHomePage = location.pathname === '/'
+		if (location.pathname === '/') { 
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth', 
+			})
+		}
+	}, [location]) 
 
-		window.scrollTo({
-			top: isHomePage ? 0 : null,
-			behavior: 'smooth',
-		})
-	}, [location])
+
 
 	const handleScroll = () => {
 		const currentScroll = window.scrollY
