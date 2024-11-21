@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Rotate as Hamburger } from 'hamburger-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate, useLocation } from 'react-router-dom'
 
 function Menu() {
 	const [isOpen, setIsOpen] = useState(false)
@@ -40,28 +40,42 @@ function Menu() {
 	}, [])
 
 	const navigate = useNavigate()
+	const location = useLocation()
+
+	const scrollToTop = () => {
+		document.documentElement.scrollTop = 0; 
+		document.body.scrollTop = 0; 
+	};
+
 	const handleNavigation = (path, scrollToId) => {
+		const isHomePage = path === '/';
+	
 		if (isMobile) {
-			navigate(path)
+			navigate(path);
+			scrollToTop();
+			closeMenu();
+			return;
+		}
+
+		if (isHomePage) {
+			navigate(path);
 			setTimeout(() => {
-				window.scrollTo(0, 0)
-			}, 0)
-
-		
-
-			closeMenu()
-			document.body.style.transform = 'translateZ(0)'; 
-
-			window.history.scrollRestoration = 'manual';
-			return () => {
-				window.history.scrollRestoration = 'auto'; 
-			};
-
-		} else {
+				window.scrollTo(0, 0);
+			}, 0);
+			closeMenu();
+		} else if (scrollToId) {
 			navigate(path, { state: { scrollToId } })
 			closeMenu()
+		} else {
+
+			navigate(path);
+			setTimeout(() => {
+				window.scrollTo(0, 0);
+			}, 0);
+			closeMenu();
 		}
-	}
+	};
+	
 
 	return (
 		<div className={`menu ${scrolled ? 'scrolled' : ''}`}>
