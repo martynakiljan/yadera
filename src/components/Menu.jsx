@@ -42,19 +42,15 @@ function Menu() {
 	const navigate = useNavigate()
 	const location = useLocation()
 
-	const scrollToTop = () => {
-		document.documentElement.scrollTop = 0; 
-		document.body.scrollTop = 0; 
-	};
 
 	const handleNavigation = (path, scrollToId) => {
 		const isHomePage = path === '/';
 	
 		if (isMobile) {
 			navigate(path);
-			scrollToTop();
+		    window.scroll({ top: -1, left: 0, behavior: "smooth" });
 			closeMenu();
-			return;
+			
 		}
 
 		if (isHomePage) {
