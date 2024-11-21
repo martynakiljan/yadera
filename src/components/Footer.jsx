@@ -1,12 +1,49 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { NavLink, useNavigate } from 'react-router-dom'
-
+import { useState } from 'react'
 const Footer = () => {
 	const navigate = useNavigate()
-	
+	const [isMobile, setIsMobile] = useState(window.innerWidth < 996)
+
+	const getPageMaxScroll = () => {
+		return (
+			Math.max(
+				document.body.scrollHeight,
+				document.body.offsetHeight,
+				document.documentElement.clientHeight,
+				document.documentElement.scrollHeight,
+				document.documentElement.offsetHeight
+			) - window.innerHeight
+		)
+	}
+
+	const scrollToTop = () => {
+		const maxScroll = getPageMaxScroll()
+		let top = -1
+
+		if (top > maxScroll) {
+			top = maxScroll
+		}
+
+		window.scroll({
+			top: top,
+			left: 0,
+			behavior: 'smooth',
+		})
+	}
+
+
 	const handleNavigation = (path, scrollToId) => {
-		if (scrollToId) {
+		if (isMobile) {
+			navigate(path)
+			setTimeout(() => {
+				scrollToTop()
+			}, 0)
+	
+			return
+		}
+		else if (scrollToId) {
 			navigate(path, { state: { scrollToId } })
 			window.scrollTo({
 				top: window.innerHeight * 0.7,
@@ -60,7 +97,7 @@ const Footer = () => {
 								className='menu__link menu__link--footer'
 								to='/offerte'
 								onClick={() => handleNavigation('/offerte', 'offerte')}>
-							Angebotsanfrage 
+								Angebotsanfrage
 							</NavLink>
 						</li>
 						<li className='menu__li'>
