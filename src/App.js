@@ -18,6 +18,17 @@ function AppContent() {
 	const { scrollYProgress } = useScroll()
 	const [isVisible, setIsVisible] = useState(false)
 
+	const location = useLocation()
+
+	useEffect(() => {
+		if (location.pathname === '/') { 
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth', 
+			})
+		}
+	}, [location]) 
+
 
 
 

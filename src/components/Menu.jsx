@@ -42,62 +42,66 @@ function Menu() {
 	const navigate = useNavigate()
 	const location = useLocation()
 
-
 	const getPageMaxScroll = () => {
-		return Math.max(
-			document.body.scrollHeight,
-			document.body.offsetHeight,
-			document.documentElement.clientHeight,
-			document.documentElement.scrollHeight,
-			document.documentElement.offsetHeight
-		) - window.innerHeight; 
-	};
-	
+		return (
+			Math.max(
+				document.body.scrollHeight,
+				document.body.offsetHeight,
+				document.documentElement.clientHeight,
+				document.documentElement.scrollHeight,
+				document.documentElement.offsetHeight
+			) - window.innerHeight
+		)
+	}
+
 	const scrollToTop = () => {
-		const maxScroll = getPageMaxScroll();
-		let top = -1; 
-	
+		const maxScroll = getPageMaxScroll()
+		let top = -1
+
 		if (top > maxScroll) {
-			top = maxScroll; 
+			top = maxScroll
 		}
-	
+
 		window.scroll({
 			top: top,
 			left: 0,
-			behavior: "smooth", 
-		});
-	};
-	
+			behavior: 'smooth',
+		})
+	}
+
 	const handleNavigation = (path, scrollToId) => {
-		const isHomePage = path === '/';
-	
+		const isHomePage = path === '/'
+
 		if (isMobile) {
-			navigate(path);
+			navigate(path)
+			console.log(path)
 			setTimeout(() => {
-				scrollToTop();
-			}, 0);
-			closeMenu();
-			return;
+				scrollToTop()
+			}, 0)
+			closeMenu()
+			return
 		}
-	
+
 		if (isHomePage) {
-			navigate(path);
+			navigate(path)
+			console.log(path)
 			setTimeout(() => {
-				scrollToTop();
-			}, 0);
-			closeMenu();
+				scrollToTop()
+			}, 0)
+			closeMenu()
 		} else if (scrollToId) {
-			navigate(path, { state: { scrollToId } });
-			closeMenu();
+			console.log(path, scrollToId)
+			navigate(path, { state: { scrollToId } })
+			closeMenu()
 		} else {
-			navigate(path);
+			console.log(path, 'koniec')
+			navigate(path)
 			setTimeout(() => {
-				scrollToTop();
-			}, 0);
-			closeMenu();
+				scrollToTop()
+			}, 0)
+			closeMenu()
 		}
-	};
-	
+	}
 
 	return (
 		<div className={`menu ${scrolled ? 'scrolled' : ''}`}>
