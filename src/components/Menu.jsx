@@ -47,6 +47,7 @@ function Menu() {
 				window.scrollTo(0, 0)
 			}, 0)
 			closeMenu()
+			document.body.style.transform = 'translateZ(0)'; 
 		} else {
 			navigate(path, { state: { scrollToId } })
 			closeMenu()
