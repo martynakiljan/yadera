@@ -25,7 +25,7 @@ const About = () => {
 			{location.pathname === '/uber-uns' && <BigImage img={img} />}
 
 			<div className='section section-story'>
-				<div className='section-col section-col__left' id='uber-uns'>
+				<div className='section-col section-col__left section-story-scroll' id='uber-uns'>
 					<Title text='unsere Gesichte' />
 				</div>
 				<div className='section-col section-col__right'>
